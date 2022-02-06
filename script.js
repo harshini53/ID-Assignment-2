@@ -3,6 +3,11 @@ $(document).ready(function(){
     $("#myModal").modal();
   });
 });
+
+$(document).ready(function(){
+  $("#gamesModal").modal('show');
+});
+
 const switchers = [...document.querySelectorAll('.switcher')]
 
 switchers.forEach(item => {

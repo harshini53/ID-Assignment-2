@@ -53,4 +53,8 @@ The features we are going to implement:
 
 - Leaderboard
      - DIsplaying of top players' username and level.
+     
+References
+Login/SignUp Page:
+https://codepen.io/frontendmax/pen/RazXVb
 
