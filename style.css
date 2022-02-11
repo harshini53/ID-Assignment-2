@@ -309,3 +309,51 @@ body {
 	margin: auto;
 	background-color: grey;
   }
+
+/*Leaderboard*/
+.container {
+	width: 700px; 
+	height: 300px;
+	background-color:whitesmoke ;
+	padding: 20px;
+}
+
+.container2
+{
+	width: 700px; 
+	height: 500px;
+	background-color:whitesmoke ;
+	padding: 20px;
+}
+
+/*Create two uneven columns together*/
+/*Two-column container*/
+.row {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  /*Styling Side Column*/
+  .side {
+	flex: 30%;
+	display: inline-block;
+	background-color: gray;
+	padding: 15px;
+	text-align: center;
+  }
+  
+  /*Styling Main Column*/
+  .main {
+	flex: 50%;
+	background-color:lightgray;
+	font-size: large;
+	padding: 10px;
+  }
+
+/*Styling Tables*/
+.table {
+	width: 90%;
+	height: 40%;
+	margin: auto;
+	text-align: center;
+}

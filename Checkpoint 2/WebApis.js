@@ -1,5 +1,11 @@
 //Leadership board
 
+$(document).ready(function () {
+  const APIKEY = "62065b991b941c73ff397a86";
+
+  
+
+/*
 //Get
 var settings = {
     "async": true,
@@ -56,3 +62,4 @@ var settings = {
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
+*/
