@@ -291,3 +291,21 @@ body {
   color: white;
   text-align: center;
 }
+
+
+
+/* Aligning elelments at the center */
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+  }
+
+  /* Styling the form*/
+.form {
+	width: 50%;
+	padding: 30px;
+	margin: auto;
+	background-color: grey;
+  }
