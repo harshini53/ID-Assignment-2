@@ -17,5 +17,5 @@ item.addEventListener('click', function() {
 })
 })
 function function_crossword(){
-  window.open("https://en.ygselect.com/category/blackpink/43/");
- }
+ window.open("https://en.ygselect.com/category/blackpink/43/");
+}
