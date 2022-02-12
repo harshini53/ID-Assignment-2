@@ -16,3 +16,6 @@ item.addEventListener('click', function() {
   this.parentElement.classList.add('is-active')
 })
 })
+function function_crossword(){
+  window.open("https://en.ygselect.com/category/blackpink/43/");
+ }
