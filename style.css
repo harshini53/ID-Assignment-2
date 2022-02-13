@@ -420,8 +420,6 @@ body {
 	  font-weight: bold;
 	  color: #000;
   }
-  .line{
-  }
   .word, .clue, .lineNum{
 	display: inline-block;
 	height: 1.4em;  
