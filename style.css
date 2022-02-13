@@ -374,6 +374,8 @@ body {
 	margin: auto;
 	text-align: center;
 }
+
+
 .container-fluid bg-3 text-center {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -388,14 +390,16 @@ body {
 	width: 100%;
 	opacity: 0;
 	transition: .5s ease;
-	background-color: #bcbebe;
+	background-color: whitesmoke;
   }
   
   .col-sm-4:hover .overlay {
 	opacity: 1;
   }
   /*crossword puzzle*/
-  .cwcontainer{
+  
+
+.cwcontainer{
 	position: absolute;
 	bottom: 0; top: 0; left: 0; right: 0;
 	text-align: center;
@@ -415,6 +419,8 @@ body {
 	  font-size: 1.5em;
 	  font-weight: bold;
 	  color: #000;
+  }
+  .line{
   }
   .word, .clue, .lineNum{
 	display: inline-block;
