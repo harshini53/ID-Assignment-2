@@ -11,9 +11,6 @@
 
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style>
         img 
@@ -44,91 +41,117 @@
             <li><a href="contact_us.html">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Login</button>
-        </ul>
+            <li><button type="button" class="btn,nav-link" data-toggle="modal" data-target="#myModal" id="login-text">Login</button>
+          </ul>
+          <a class="nav-link" href="account.html" id="name-text" style="display: none"></a>
+        
         </div>
       </nav>
 
+    <br><h2 style="text-align:center">Account</h2>
+    <div class="container3 ">
     
-    <div class="container2">
-    <h2>Rounded Images</h2>
-
-    <img src="images/avatar.png" alt="Avatar" style="width: 200px">
-        
         <div class="row">
             <!--A sub side container which holds the video-->
-            <div class="side">
-                <h2>Rounded Images</h2>
+            <div class="side"><br>
                 <img src="images/avatar.png" alt="Avatar" style="width: 200px">
             </div>
 
             <!--A sub main container-->
             <div class="main">
-                <h3>Username:</h3>
+              <section>
+                <h3>Username: <span id="signup-username"></span></h3> <!-- signup-username -->
+              </section>
+
+              <section>
+                <h3>Email: <span id="account-email"></span></h3> <!-- signup-email -->
+              </section>
+
+              <section>
+                <h3>Password: <span id="account-password"></span></h3> <!-- signup-password -->
+              </section>
+
+              <section>
+                <h3>Level: <span id="account-level"></span></h3>
+              </section>
+
+              <section>
+                <h3>Score: <span id="account-score"></span></h3>
+              </section>
+
+              <section>
+                <h3>Rank: <span id="account-rank"></span></h3>
+              </section>
             </div>
 
         </div>
     </div>
 
 
-        <div class ="footer">
-            <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
-          </div>
+    <div class ="footer">
+      <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
+    </div>
         
-         <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       
     <section class="forms-section">
-  <div class="forms">
-    <div class="form-wrapper is-active">
-      <button type="button" class="switcher switcher-login">
-        Login
-        <span class="underline"></span>
-      </button>
-      <form class="form form-login">
-        <fieldset>
-          <div class="input-block">
-            <label for="login-email">E-mail</label>
-            <input id="login-email" type="email" required>
-          </div>
-          <div class="input-block">
-            <label for="login-password">Password</label>
-            <input id="login-password" type="password" required>
-          </div>
-        </fieldset>
-        <button type="submit" class="btn-login">Login</button>
-      </form>
+    <div class="forms">
+      <div class="form-wrapper is-active">
+        <button type="button" class="switcher switcher-login">
+          Login
+          <span class="underline"></span>
+        </button>
+        
+        <form class="form form-login" id="login-page">
+          <fieldset>
+            <div class="input-block">
+              <label for="login-username">Username</label>
+              <input id="login-username" type="text" required>
+            </div>
+
+            <div class="input-block">
+              <label for="login-password">Password</label>
+              <input id="login-password" type="password" required>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn-login">Login</button>
+        </form>
     </div>
+
     <div class="form-wrapper">
       <button type="button" class="switcher switcher-signup">
         Sign Up
         <span class="underline"></span>
       </button>
-      <form class="form form-signup">
+
+      <form class="form form-signup" id="create-page">
         <fieldset>
+          <div class="input-block">
+            <label for="signup-username">Username</label>
+            <input id="signup-username" type="text" required>
+          </div>
+
           <div class="input-block">
             <label for="signup-email">E-mail</label>
             <input id="signup-email" type="email" required>
           </div>
+
           <div class="input-block">
             <label for="signup-password">Password</label>
             <input id="signup-password" type="password" required>
           </div>
-          <div class="input-block">
-            <label for="signup-password-confirm">Confirm password</label>
-            <input id="signup-password-confirm" type="password" required>
-          </div>
         </fieldset>
-        <button type="submit" class="btn-signup">Continue</button>
+        <button type="submit" class="btn-signup" id="create-page">Register</button>
       </form>
     </div>
-  </div>
-</section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    <script src="loginapi.js"></script>
+
 </body>
 </html>
-
-
-</body>
 
