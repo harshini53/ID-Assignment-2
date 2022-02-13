@@ -377,6 +377,7 @@ body {
   .col-sm-4:hover .overlay {
 	opacity: 1;
   }
+  /*crossword puzzle*/
   .cwcontainer{
 	position: absolute;
 	bottom: 0; top: 0; left: 0; right: 0;

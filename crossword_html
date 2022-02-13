@@ -20,14 +20,14 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Topic 1-1</a></li>
+          <li><a href="discover_page1.html">Topic 1-1</a></li>
           <li><a href="#">Topic 1-2</a></li>
         </ul>
       </li>
       <li><a href="games.html">Games</a></li>
-      <li><a href="#">Leaderboard</a></li>
+      <li><a href="leadership_board.html">Leaderboard</a></li>
       <li><a href="contact_us.html">Contact</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
