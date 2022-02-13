@@ -26,7 +26,7 @@
             <li class="active"><a href="index.html">Home</a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Topic 1-1</a></li>
+                <li><a href="discover_page1.html">Discover Page</a></li>
                 <li><a href="#">Topic 1-2</a></li>
               </ul>
             </li>
@@ -43,10 +43,8 @@
 
         <h2 style="text-align: center;">Leaderboard</h2>
         <div class="container">
-            <p>Username</p>
-
              <!--Created table to display things-->
-             <table border="1" style="border-collapse:collapse" class="table">
+             <table border="1" style="border-collapse:collapse" class="table" id="contact-list">
 
                 <tr style="background-color: black;color: white;">
                     <th colspan="1">Rank</th>
@@ -57,17 +55,15 @@
 
                 <tr>
                     <td class="Rank">$$$</td>
-                    <td class = "Level"></td>
+                    <td class = "Name"></td>
                     <td class="Level"></td>
-                    <td></td>
+                    <td class="Score"></td>
                 </tr>
 
                 
             </table>
 
         </div>
-
-
 
 
         <div class ="footer">
@@ -125,5 +121,6 @@
   </div>
 </section>
     <script src="script.js"></script>
+    <script src="WebApis.js"></script>
 </body>
 </html>
