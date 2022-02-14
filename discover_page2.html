@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Scistatics</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
+      <meta name="description" content="Discover">
+      <meta name="viewport" content="width=device-width, inital-scale=1.0">
+  
+      <title>Scistatics</title>
+  
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
   <body>
-    <nav class="navbar navbar-inverse bg-light">
+    <nav class="navbar navbar-light">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Scistatics</a>
@@ -32,18 +36,50 @@
   </ul>
   </div>
 </nav>
-<div class="container-fluid">
-  <img src = "images/discover_page.jpg" style="width:100%"><br><br>
-  <img src = "images/frontviewofeye.jpg" class="img-responsive" style="width:60%">
-  <div class="myDIV">Iris</div>
-  
-
-
+<img src="images/discover_page.jpg" width="100%">
+<div class="container h-100">
+<div class="d-flex h-100 text-center align-items-center">
+<div class="container-fluid bg-2 text-center">
+  <h3><strong>Tap on the image to see the differences of the size of the pupil during the dark and  bright lit place.</strong></h3>
+  <img id="myImage" onclick="changeImage()" src="images/dilationofeye1.jpg" width="300" height="300">
+</div>
+<div class="container-fluid bg-3 text-center"> 
+  <h2 class="text-left"><strong>How does the eye focus?</strong></h2>
+  <h4 class="text-left">The cornea is shaped like a dome and bends light to help the eye focus.</h4>
+  <h4 class="text-left">The eye focuses by adjusting its lens such that sharp images of objects from different distances are formed in the retina.</h4>
+</div>
+<div class="container-fluid bg-4 text-center"> 
+  <h2 class="text-left"><strong>Focusing on near objects</strong></h2>
+  <h4 class="text-left">1.When looking at near objects,<strong>cililary muscles contract</strong>, 
+  thus causing the <strong>suspensory ligaments to become relaxed.</strong></h4>
+  <h4 class="text-left">2.The lens becomes <strong>more convex and thicker</strong>,
+  thus decreasing its focal length to focus the light rays onto the retina.</h4>
+</div>
+<div class="container-fluid bg-5 text-center"> 
+  <h2 class="text-left"><strong>Focusing on distant objects</strong></h2>
+  <h4 class="text-left">
+  1.When looking at distant objects, ciliary muscles relax causing the <strong>suspensory ligaments to become taut(tighten)</strong></h4>
+  <h4 class="text-left">
+  2.The lens becomes <strong>less convex and thinner</strong>thus increasing its focal length to focus the light rays onto the retina.</h4>
+</div>
+<div class="container-fluid bg-6 text-center"> 
+  <h2 class="text-left"><strong>Pupil reflex</strong></h2>
+  <h4 class="text-left">The pupil reflex is an <strong>involuntary response of pupil</strong> to different light conditions.</h4>
+  <h4 class="text-left">(a) Bright light</h4>
+  <h4 class="text-left">
+  1. In bright light,<strong>circular muscles of the iris contract</strong>while the <strong>radial muscles relax.</strong></h4>
+  <h4 class="text-left">2. The pupil becomes smaller.</h4>
+  <h4 class="text-left">3. This decreaases the amount of light entering the eye thus preventing damange to the retina</h4><br>
+  <h4 class="text-left">(b) Dim light</h4>
+  <h4 class="text-left">1. In dim light, <strong>circular muscles of the iris relax</strong> while the <strong>radial muscles contract.</strong></h4>
+  <h4 class="text-left">2. The pupil becomes larger and more light enters the eye, which allows us to see better in the dark.</h4>
+  </div>
 </div>
 <div class ="footer">
   <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
 </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 
