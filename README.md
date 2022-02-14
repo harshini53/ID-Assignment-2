@@ -56,7 +56,7 @@ The features we are going to implement:
      
 References
 Login/SignUp Page:
-https://codepen.io/frontendmax/pen/RazXVb
+https://codepen.io/Devel0per95/pen/rjOpdx
 
 Images:
 https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/
