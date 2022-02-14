@@ -60,7 +60,7 @@
             <!--A sub main container-->
             <div class="main">
               <section>
-                <h3>Username: <span id="signup-username"></span></h3> <!-- signup-username -->
+                <h3>Username: <span id="account-username"></span></h3> <!-- signup-username -->
               </section>
 
               <section>
@@ -99,10 +99,11 @@
     <section class="forms-section">
     <div class="forms">
       <div class="form-wrapper is-active">
-        <button type="button" class="switcher switcher-login">
+        <button type="button" class="switcher switcher-login" id="login-text">
           Login
           <span class="underline"></span>
         </button>
+        <a class="nav-link" href="account_page.html" id="name-text" style="display: none"></a> <!--Delete later-->
         
         <form class="form form-login" id="login-page">
           <fieldset>
@@ -116,7 +117,7 @@
               <input id="login-password" type="password" required>
             </div>
           </fieldset>
-          <button type="submit" class="btn-login">Login</button>
+          <button type="submit" class="btn-login" id="createLoginButton">Login</button>
         </form>
     </div>
 
@@ -143,7 +144,7 @@
             <input id="signup-password" type="password" required>
           </div>
         </fieldset>
-        <button type="submit" class="btn-signup" id="create-page">Register</button>
+        <button type="submit" class="btn-signup" id="createModalButton" >Register</button>
       </form>
     </div>
     

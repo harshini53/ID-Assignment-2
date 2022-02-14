@@ -4,7 +4,7 @@ const login = JSON.parse(localStorage.getItem('Login'));
 
 
 $(document).ready(function() {
-    //$('.mobile-line').append(`<hr/>`);
+    $('.mobile-line').append(`<hr/>`);
 
     if (login != null) { // Check if the user is logged in
         $('#login-text').hide(); // Hide login text in nav bar
@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('#name-text').show(); // Display the account name in nav bar
     }
 
-    /*
+    
     $("#login-text").on("click", function() { // Hide error messages on nav bar login button click
         $('#login-form-text-error').hide();
         $('#create-form-text-error').hide();
@@ -29,7 +29,7 @@ $(document).ready(function() {
         $('#login-modal').modal('show');
         $('#create-form-text-error').hide();
     });
-    */
+    
 
     $("#login-page").submit(function(e) {
         e.preventDefault();
@@ -58,8 +58,8 @@ function loginAccount() {
     .done(function(response) {
         var accountFound = false; 
         response.map((account) => {
-            if ($("#login-username").val() === account.name && $("#login-password").val() === account.password) {
-                setAccount(account._id, account.name);
+            if ($("#login-username").val() === account.Username && $("#login-password").val() === account.Password) {
+                setAccount(account._id, account.Username);
                 accountFound = true;
             }
         });
@@ -76,9 +76,9 @@ function loginAccount() {
 
 }
 
-function setAccount(id, name) {
+function setAccount(id, Username) {
     $('#login-form-text-error').hide();
-    localStorage.setItem("login", JSON.stringify([id, name]));
+    localStorage.setItem("login", JSON.stringify([id, Username]));
     $('#loginModal').modal('hide');
     location.reload();
 }
@@ -96,15 +96,15 @@ function validateNewAccount() {
         }
     })
     .done(function(response) {
-        var checkName = true;
+        var CheckUserName = true;
 
         response.map((account) => {
-            if ($("#signup-username").val() === account.name) {
+            if ($("#signup-username").val() === account.Username) {
                 $('#login-page-text-error').hide();
                 $('#create-page-text-error').html('Account Name Already Exists!');
                 $('#create-page-text-error').css('color','red');
                 $('#create-page-text-error').show();
-                checkName = false;
+                CheckUserName = false;
             }
         });
     });
@@ -114,7 +114,9 @@ function createAccount() {
     var jsondata = { 
         "Username": $("#signup-username").val(), 
         "Email": $("#signup-email").val(), 
-        "Password": $("#signup-password").val()
+        "Password": $("#signup-password").val(),
+        "Score": 0,
+        "Rank": 0
     }; 
     console.log(APIKEY);
     /*
@@ -131,7 +133,7 @@ function createAccount() {
         "processData": false,
         "data": JSON.stringify(jsondata)
         })
-
+    
     .done(function() {
         console.log()
         $('#login-form-text-error').html('Account created successfully! Please log in again.');
@@ -141,7 +143,9 @@ function createAccount() {
         $('#create-form-text-error').hide();
         $('#login-form-text-error').show();
     });
-    */
+    
+    * */
+    
 
     let settings = {
     "async": true,
@@ -157,9 +161,11 @@ function createAccount() {
     "data": JSON.stringify(jsondata)
     }
 
+    
     $.ajax(settings).done(function (response) {
     console.log(response);
     });
+    
 
 }
 
