@@ -112,7 +112,7 @@ font-family: 'Ubuntu', sans-serif;
 	padding-top: 15px;
 }
 
-a {
+b {
 	text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
 	color: #E1BEE7;
 	text-decoration: none
@@ -122,21 +122,24 @@ a {
 	.main {
 		border-radius: 0px;
 	}
-/*applies to all pages*/	
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
 }
 
+/*applies to all pages*/	
+.footer {
+	background-color: #000000;
+    height: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+	color: white;
+  }
+  
+  
 /*discover_page2.html*/
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 8px;
+	padding-right: 23px;
   }
   .bg-1 { 
     background-image: "images/discover_page,jpg";
@@ -217,8 +220,8 @@ a {
 	flex-wrap: wrap;
   }
   
-  /*Styling Side Column*/
-  .side {
+  /*Styling Side1 Column*/
+  .side1 {
 	flex: 30%;
 	display: inline-block;
 	background-color: gray;
@@ -226,8 +229,8 @@ a {
 	text-align: center;
   }
   
-  /*Styling Main Column*/
-  .main {
+  /*Styling Side2 Column*/
+  .side2 {
 	flex: 50%;
 	background-color:lightgray;
 	font-size: large;
@@ -242,6 +245,11 @@ a {
 	text-align: center;
 }
 
+/*Account*/
+.avatar 
+{
+	border-radius: 70%;
+}
 
 .container-fluid bg-3 text-center {
     padding-top: 70px;
@@ -268,4 +276,3 @@ a {
 	top: 50%;
 	left: 40%;
   }
-} 
