@@ -7,6 +7,28 @@
 	color: white;
 	text-align: center;
   }
+  .navbar{
+	  color: darkgray ;
+  }
+  
+  .glyphicon{
+	  size: 50px;
+  }
+
+  .ctn .btn {
+	position: absolute;
+	top: 80%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: #555;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+  }
 /*log in and sign up form*/
 
 .main {
@@ -128,35 +150,14 @@ a {
 	.main {
 		border-radius: 0px;
 	}
-
+.contactdetails{
+	background: linear-gradient(to right, #9C27B0, #E040FB);
+}
 /*discover_page2.html*/
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .bg-1 { 
-    background-image: "images/discover_page,jpg";
-  }
-  .bg-2 { 
-    background-color: whitesmoke;
-    color: black;
-  }
-  .bg-3 { 
-    background-color: #555555;
-    color:whitesmoke ;
-  }
-  .bg-4{
-	background-color: whitesmoke;
-    color: black;
-  }
-.bg-5{
-    background-color: #555555;
-    color:whitesmoke ;	
-}
-.bg-6{
-	background-color: whitesmoke;
-    color: black;
-}
 
 
 
