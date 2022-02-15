@@ -6,7 +6,7 @@
     <meta name="description" content="Login">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
 
-    <title>login</title>
+    <title>Login</title>
 
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,12 +18,15 @@
     <p class="sign text-center">LOGIN</p>
     <p class="text-white-50 mb-5 text-center">Please enter your login and password!</p>
     <form class="form1">
-      <input class="un text-white-50" type="text" placeholder="Username">
-      <input class="pass text-center" type="password" placeholder="Password">
-      <a class="submit text-center" >Log In</a>
+      <input class="un text-white-50" type="text" placeholder="Username" id="login-username" required>
+      <input class="pass text-center" type="password" placeholder="Password" id="login-password" required>
+      <a class="submit text-center" id="loginSubmitButton" >Log In</a>
+      <p id="exist-error-name"></p>
+      <p id="exist-error-pwd"></p>
       <p class="signup text-center">Don't have an account? <a href="signup.html">Sign Up</p>
     </div>
      
   <script src="script.js"></script>
+  <script src="loginapi.js"></script>
 </body>
 </html>
