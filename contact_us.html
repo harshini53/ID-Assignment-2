@@ -13,19 +13,6 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <style>
-    input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  </style>
 </head>
 
 
@@ -33,14 +20,13 @@
     <nav class="navbar navbar-light">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">SciFind</a>
+            <a class="navbar-brand" href="index.html"><em>Sci</em>stastic</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="discover_page1.html">Topic 1-1</a></li>
-                <li><a href="#">Topic 1-2</a></li>
+                <li><a href="discover_page2.html">Topic 1-2</a></li>
               </ul>
             </li>
             <li><a href="games.html">Games</a></li>
@@ -48,55 +34,47 @@
             <li><a href="contact_us.html">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><button onclick="loginFunction()" class="btn">Login</button>
+            <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
         </ul>
         </div>
       </nav>
-    <div style = "text-align: left;"class="row sizecontact center">
-
-      
-    <h2 style="text-align: center;">Contact Us</h2>
-
-    <form class="form" method="post" action="scifind@gmail.com" enctype="text/plain">
-        <!--Label and textfield for name-->
-        <p>
-            <label style="display: inline-block;font-weight:bold;width: 100px;" for="name">Username:</label>
-            <input type="text" id="name" name="name" placeholder="Username" required>
-        </p>
-
-        <!--Label and textfield for name-->
-        <p>
-            <label style="display: inline-block;font-weight:bold;width: 120px;" for="name">Problems Faced:</label><br>
-            
-            <input type="checkbox" id="problems" name="problems" required>
-            <label for="css">Lagging</label>
-
-            <input type="checkbox" id="problems" name="problems" required>
-            <label for="css">Reset Password</label>
-
-            <input type="checkbox" id="problems" name="problems" required>
-            <label for="css">Others</label>
-        </p>
-
-        <!--Messages-->
-        <p>
-            <label style=" display:inline-block; font-weight: bold ; width: 100px ;" for="contact">
-                Message</label>
-            <textarea type = "text" id="contact" name="contact" placeholder = "Type your message here...." rows="5" cols="95" required></textarea>
-        </p>
-
-        <p>
-            <label style=" display:inline-block; font-weight: bold ; width: 300px ;" for="contact">
-                Any feedback to give?</label>
-            <textarea type = "text" id="contact" name="contact" placeholder = "Thank you for the feedback!" rows="5" cols="95"></textarea>
-        </p>
-
-        <!--Label for Submit and Clear form-->
-        <button onclick="myFunction1()">Submit</button>
-        <input type="reset" value="Clear Form">
-        
-    </form>
-    
+      <form>
+      <div class="contactdetails container-fluid">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+          <div class="col-sm-5 text-left text-center">
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> 535 Clementi Rd, Singapore 599489</p>
+            <p><span class="glyphicon glyphicon-phone"></span>  +65 6466 6555</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> hello@scistastic.com</p>
+          </div>
+          <div class="col-sm-7">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <label style=" display:inline-block; font-weight: bold ; width: 300px ;" for="problems">Select a topic: </label>
+            <select class="form-control form-control-sm">
+              <option>Feedbacks</option>
+              <option>Lagging</option>
+              <option>Reset Password</option>
+              <option>Others</option>
+         </select><br>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <textarea class="form-control" id="feedbacks" name="feedbacks" placeholder="Feedbacks" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-default pull-right" type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
     <div class ="footer">
         <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
       /div>
