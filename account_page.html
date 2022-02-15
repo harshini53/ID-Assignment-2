@@ -1,95 +1,108 @@
+<!--Currently the dicover toggle doesnt work-->
+<!--Unsure of page design-->
+<!--Color scheme-->
+<!--Try to upload avatr image/random generator of pictures-->
+
+
 <!DOCTYPE html>
 <html>
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
     <meta name="description" content="Contact">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
 
     <title>Account</title>
+    <link rel="icon" type="image/x-icon" href="#">
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
 
-    <style>
-        img 
-        {
-          border-radius: 50%;
-        }
-    </style>
+  </head>
 
-</head>
-
-<body>
-
-    <nav class="navbar navbar-inverse bg-light">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">SciFind</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Topic 1-1</a></li>
-                <li><a href="#">Topic 1-2</a></li>
-              </ul>
-            </li>
-            <li><a href="games.html">Games</a></li>
-            <li><a href="#">Leaderboard</a></li>
-            <li><a href="contact_us.html">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><button type="button" class="btn,nav-link" data-toggle="modal" data-target="#myModal" id="login-text">Login</button>
-          </ul>
-          <a class="nav-link" href="account.html" id="name-text" style="display: none"></a>
-        
+  <body>
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Scistatics</a>
         </div>
-      </nav>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover <span class="caret"></span></a></li>
+            <ul class="dropdown-menu">
+              <li><a href="discover_page1.html">Topic 1-1</a></li>
+              <li><a href="discover_page2.html">Topic 1-2</a></li>
+            </ul>
+          </li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leadership_board.html">Leaderboard</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><button onclick="loginFunction()" class="btn">Login</button>
+      </ul>
+      </div>
+    </nav>
 
     <br><h2 style="text-align:center">Account</h2>
-    <div class="container3 ">
-    
+    <div class="container3">
+  
         <div class="row">
             <!--A sub side container which holds the video-->
-            <div class="side"><br>
-                <img src="images/avatar.png" alt="Avatar" style="width: 200px">
+            <div class="side1"><br>
+                <img class="avatar" src="images/avatar.png" alt="Avatar" style="width: 250px">
             </div>
 
             <!--A sub main container-->
-            <div class="main">
+            <div class="side2">
               <section>
-                <h3>Username: <span id="account-username"></span></h3> <!-- signup-username -->
+                <h3>Username: 
+                  <br><span id="account-username"></span>
+                </h3> <!-- signup-username -->
               </section>
 
               <section>
-                <h3>Email: <span id="account-email"></span></h3> <!-- signup-email -->
+                <h3>Email: 
+                  <br><span id="account-email"></span>
+                </h3> <!-- signup-email -->
               </section>
 
               <section>
-                <h3>Password: <span id="account-password"></span></h3> <!-- signup-password -->
+                <h3>Password: 
+                  <br><span id="account-password"></span>
+                </h3> <!-- signup-password -->
               </section>
 
               <section>
-                <h3>Level: <span id="account-level"></span></h3>
+                <h3>Level: 
+                  <br><span id="account-level"></span>
+                </h3>
               </section>
 
               <section>
-                <h3>Score: <span id="account-score"></span></h3>
+                <h3>Score: 
+                  <br><span id="account-score"></span>
+                </h3>
               </section>
 
               <section>
-                <h3>Rank: <span id="account-rank"></span></h3>
+                <h3>Rank: 
+                  <br><span id="account-rank"></span>
+                </h3>
               </section>
             </div>
 
         </div>
     </div>
 
+    <br><br><br><br><br><br><br>
 
     <div class ="footer">
-      <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
     </div>
         
     <!-- Modal -->
@@ -103,7 +116,7 @@
           Login
           <span class="underline"></span>
         </button>
-        <a class="nav-link" href="account_page.html" id="name-text" style="display: none"></a> <!--Delete later-->
+        <b class="nav-link" href="account_page.html" id="name-text" style="display: none"></a> <!--Delete later-->
         
         <form class="form form-login" id="login-page">
           <fieldset>
@@ -117,9 +130,10 @@
               <input id="login-password" type="password" required>
             </div>
           </fieldset>
-          <button type="submit" class="btn-login" id="createLoginButton">Login</button>
+          <button type="submit" class="btn-login">Login</button>
         </form>
     </div>
+  </section>
 
     <div class="form-wrapper">
       <button type="button" class="switcher switcher-signup">
@@ -130,22 +144,24 @@
       <form class="form form-signup" id="create-page">
         <fieldset>
           <div class="input-block">
-            <label for="signup-username">Username</label>
-            <input id="signup-username" type="text" required>
+            <label for="register-username">Username</label>
+            <input id="register-username" type="text" required>
           </div>
 
           <div class="input-block">
-            <label for="signup-email">E-mail</label>
-            <input id="signup-email" type="email" required>
+            <label for="register-email">E-mail</label>
+            <input id="register-email" type="email" required>
           </div>
 
           <div class="input-block">
-            <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" required>
+            <label for="register-password">Password</label>
+            <input id="register-password" type="password" required>
           </div>
         </fieldset>
-        <button type="submit" class="btn-signup" id="createModalButton" >Register</button>
+        <button type="submit" class="btn-signup" id="registersubmitbutton" >Register</button>
       </form>
+    </div>
+    </div>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
