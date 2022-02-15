@@ -1,7 +1,13 @@
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+  }
 /*log in and sign up form*/
-body {
-	font-family: 'Ubuntu', sans-serif;
-}
 
 .main {
 	background-color: #FFFFFF;
