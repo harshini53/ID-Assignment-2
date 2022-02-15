@@ -1,6 +1,6 @@
-
+/*
 const APIKEY = "62073a121b941c73ff397ab1";
-const login = JSON.parse(localStorage.getItem('Login'));
+const login = JSON.parse(localStorage.getItem('login'));
 
 
 $(document).ready(function() {
@@ -144,9 +144,6 @@ function createAccount() {
         $('#login-form-text-error').show();
     });
     
-    * */
-    
-
     let settings = {
     "async": true,
     "crossDomain": true,
@@ -168,4 +165,121 @@ function createAccount() {
     
 
 }
+*/
 
+
+const APIKEY = "62073a121b941c73ff397ab1";
+const login = JSON.parse(localStorage.getItem('login'));
+
+
+(document).ready(function () {
+    $("#loginSubmitButton").click(function(e){
+        e.preventDefault();
+
+        let loginUser = $("#login-username").val();
+        let loginPwd = $("#login-password").val();
+
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://idasg2-f43a.restdb.io/rest/account",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+            }
+        }
+
+        $.ajax(settings).done(function (response) {
+            //Checking if account matches
+            response.map(account =>{
+                if(account.Username === loginUser && account.Password === loginPwd)
+                //setAccount(account._id, account.Username);
+                localStorage.setItem("login", JSON.stringify([id, Username]));
+                accountFound = true;
+            });
+
+            accountFound = false;
+            $("#errMsgLogin").html("Account does not exist!")
+            $('#login-form-text-error').css('color','red');
+
+            console.log(response)
+
+        });
+    });
+
+    $("#registerSubmitButton").click(function(e){
+        e.preventDefault();
+        let registerUser = $("#register-username").val();
+        let registerEmail = $("#register-email").val();
+        let registerPwd = $("#register-password").val();
+
+        var jsondata = { 
+            "Username": registerUser,
+            "Email": registerEmail,
+            "Password": registerPwd
+        }
+
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://idasg2-f43a.restdb.io/rest/account",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata)
+        }
+        
+        $.ajax(settings).done(function (response) { 
+            findAccount = false, 
+            localStorage.setItem("login", Username);
+            $('#success-msg').html('Unsucessful! Please try again!');
+
+            if(findAccount){
+            $('#success-msg').html('Account created successfully!');
+            $('#success-msg').css('color','green');
+            console.log(response);
+            }
+        });
+    });
+
+});
+    
+function existingAccounts(){
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://idasg2-f43a.restdb.io/rest/account",
+        "method": "GET",
+        "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+        }
+    }
+
+    $.ajax(settings).done(function (response) {
+        accountExist = true;
+        response.map((account) => {
+            if (registerUser === account.Username) {
+                $('#exist-error-name').html('Account Name Already Exists!');
+                $('#exist-error-name').css('color','red');
+                accountExist = false;
+            }
+
+            if(registerPwd === account.Password){
+                $('#exist-error-pwd').html('Password Already Exists!');
+                $('#exist-error-pwd').css('color','red');
+                accountExist = false;
+            }
+        });
+
+    });
+
+}
+    
