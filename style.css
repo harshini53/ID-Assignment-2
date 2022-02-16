@@ -29,6 +29,31 @@
 	cursor: pointer;
 	border-radius: 5px;
   }
+  .top-left {
+	position: absolute;
+	top: 15%;
+	left:10%;
+	color: white;
+	font-size: 20px;
+	font-family: 'Oswald'
+  }
+  .underline{
+	position: absolute;
+	top: 20%;
+	left:10%;
+	color: white;
+	font-size: 20px;
+	font-family: 'Oswald'
+  }
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	color: white;
+	font-size: 70px;
+	font-family: 'Oswald'
+  }
+
 /*log in and sign up form*/
 
 .main {
@@ -166,11 +191,7 @@ b {
 	color: white;
   }
   
-/*discover_page2.html*/
-.container-fluid {
-    padding-top: 8px;
-	padding-right: 23px;
-  }
+
 
 
 
