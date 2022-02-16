@@ -53,7 +53,12 @@
 	font-size: 70px;
 	font-family: 'Oswald'
   }
-
+.pupil-object{
+	position: absolute;
+	top: 100%;
+	left: 70.8%;
+	font-size: 40px;
+}
 /*log in and sign up form*/
 
 .main {
