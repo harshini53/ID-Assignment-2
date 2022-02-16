@@ -1,7 +1,6 @@
- /*crossword puzzle*/
-  
 
- .cwcontainer{
+
+.cwcontainer{
 	position: absolute;
 	bottom: 0; top: 0; left: 0; right: 0;
 	text-align: center;
@@ -22,6 +21,7 @@
 	  font-weight: bold;
 	  color: #000;
   }
+  
   .word, .clue, .lineNum{
 	display: inline-block;
 	height: 1.4em;  
