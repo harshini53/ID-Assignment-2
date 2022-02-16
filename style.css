@@ -281,29 +281,40 @@ b {
 	border-radius: 70%;
 }
 
-.container-fluid bg-3 text-center {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: whitesmoke;
-}
+/*Cards*/
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 30%;
+	border-radius: 5px;
+  }
   
-.col-sm-6:hover .overlay {
-	opacity: 1;
-}
+  .card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .imgCard {
+	border-radius: 9px 5px 0 0;
+  }
+  
+  .containerCard {
+	padding: 14px 16px;
+  }
 
-.gbtn{
-	position: absolute;
-	top: 50%;
-	left: 40%;
-}
+  /*Game buttons*/
+
+  .button {
+	background-color: #E1BEE7; /* Green */
+	border: none;
+	padding: 10px 25px;
+	text-align: center;
+	transition-duration: 0.4s;
+	margin-top: 14px;
+	margin-bottom: 14px;
+  }
+  
+  .button:hover {
+	background-color: #E1BEE7;
+	color: white;
+  }
+  

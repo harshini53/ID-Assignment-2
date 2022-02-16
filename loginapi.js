@@ -167,6 +167,7 @@ function createAccount() {
 }
 */
 
+//localStorage.setItem("login");
 
 const APIKEY = "62073a121b941c73ff397ab1";
 const login = JSON.parse(localStorage.getItem('login'));
@@ -208,17 +209,23 @@ function loginToAccount()
         //Checking if account matches
         response.map(account =>{
             if(account.Username === loginUser && account.Password === loginPwd)
-            //setAccount(account._id, account.Username);
-            localStorage.setItem("login", JSON.stringify([id, Username]));
-            accountFound = true;
+            {
+                localStorage.setItem("login", JSON.stringify([account.Username,account.Password]));
+                accountFound = true;
+                console.log(response);
+                $("#errMsgLogin").text("Account created successfully!");
+                console.log(localStorage.getItem("login")); //Codes working check
+            }
+            else
+            {
+                $("#errMsgLogin").text("Account does not exist!");
+                $('#errMsgLogin').css('color','red');
+                accountFound = false;
+
+            }
         });
         
-        //Error Messages
-        accountFound = false;
-        $("#errMsgLogin").html("Account does not exist!")
-        $('#login-form-text-error').css('color','red');
-
-        console.log(response)
+        //console.log(localStorage.getItem("login")); //Codes working check
 
     });
 
@@ -253,15 +260,10 @@ function createAccount(){
     }
     
     $.ajax(settings).done(function (response) { 
-        findAccount = false, 
-        localStorage.setItem("login", Username);
-        $('#success-msg').html('Unsucessful! Please try again!');
-
-        if(findAccount){
+        //findAccount = false, 
         $('#success-msg').html('Account created successfully!');
         $('#success-msg').css('color','green');
         console.log(response);
-        }
     });
 
 }
@@ -297,10 +299,7 @@ function existingAccounts(){
                 accountExist = false;
             }
         });
-        if(accountExist){
-            createAccount();
-        }
-
+        
     });
 
 }

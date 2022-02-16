@@ -1,14 +1,14 @@
 $(document).ready(function(){
-    $("#myBtn").click(function(){
-      $("#myModal").modal();
-    });
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
   });
-  
-  $(document).ready(function(){
-    $("#gamesModal").modal('show');
-  });
+});
 
-  
+$(document).ready(function(){
+  $("#gamesModal").modal('show');
+});
+
+
 
 //---------------------------------//
 //   GLOBAL VARIABLES              //
@@ -59,9 +59,9 @@ FormatClues();
 
 function FormatClues(){
 var cluesAcross = document.getElementById("cluesAcross"),
-  cluesDown = document.getElementById("cluesDown"),
-  directionAcross = document.getElementById("directionAcross"),
-  directionDown = document.getElementById("directionDown");
+cluesDown = document.getElementById("cluesDown"),
+directionAcross = document.getElementById("directionAcross"),
+directionDown = document.getElementById("directionDown");
 
 cluesAcross.innerHTML = "";
 cluesDown.innerHTML = "";
@@ -71,15 +71,15 @@ cluesDown.appendChild(directionDown);
 
 for(i = 0; i < wordElementsAcross.length; i++){
 var lineEle = cluesAcross.appendChild(wordElementsAcross[i].ele),
-    numEle = lineEle.getElementsByClassName("lineNum")[0];
-    console.log(numEle);
+  numEle = lineEle.getElementsByClassName("lineNum")[0];
+  console.log(numEle);
 numEle.innerHTML = wordElementsAcross[i].num;    
 RemoveClass(numEle,'disabled');
 }  
 
 for(i = 0; i < wordElementsDown.length; i++){
 var lineEle = cluesDown.appendChild(wordElementsDown[i].ele),
-    numEle = lineEle.getElementsByClassName("lineNum")[0];
+  numEle = lineEle.getElementsByClassName("lineNum")[0];
 numEle.innerHTML = wordElementsDown[i].num;
 RemoveClass(numEle,'disabled');
 }
@@ -122,45 +122,45 @@ ToggleInputBoxes(true);
 
 function ToggleInputBoxes(active){
 var w=document.getElementsByClassName('word'),
-  d=document.getElementsByClassName('clue'),
-  b=document.getElementById('btnGen'),
-  dir=document.getElementsByClassName('clueDirection'),
-  char=document.getElementsByClassName('char');
+d=document.getElementsByClassName('clue'),
+b=document.getElementById('btnGen'),
+dir=document.getElementsByClassName('clueDirection'),
+char=document.getElementsByClassName('char');
 
 if (active){
 RemoveClass(b,'disabled');
 
 for(var i=0;i<w.length; i++){
-  RemoveClass(w[i], 'hide');
-  RemoveClass(d[i], 'clueReadOnly');
-  d[i].disabled = '';
+RemoveClass(w[i], 'hide');
+RemoveClass(d[i], 'clueReadOnly');
+d[i].disabled = '';
 }
 
 for(i=0;i<dir.length;i++){
-  AddClass(dir[i], 'disabled');
+AddClass(dir[i], 'disabled');
 }
 
 for(i=0;i<char.length;i++){
-  AddClass(char[i], 'charReadOnly');
-  char[i].disabled = 'readonly';
+AddClass(char[i], 'charReadOnly');
+char[i].disabled = 'readonly';
 }
 }
 else{
 AddClass(b,'disabled');
 
 for(var i=0;i<w.length; i++){
-  AddClass(w[i], 'hide');
-  AddClass(d[i], 'clueReadOnly');
-  d[i].disabled = 'readonly';
+AddClass(w[i], 'hide');
+AddClass(d[i], 'clueReadOnly');
+d[i].disabled = 'readonly';
 }
 
 for(i=0;i<dir.length;i++){
-  RemoveClass(dir[i], 'disabled');
+RemoveClass(dir[i], 'disabled');
 }
 
 for(i=0;i<char.length;i++){
-  RemoveClass(char[i], 'charReadOnly');
-  char[i].disabled = '';
+RemoveClass(char[i], 'charReadOnly');
+char[i].disabled = '';
 }
 }
 }
@@ -184,7 +184,7 @@ board = [];
 for(var i = 0; i < 50; i++){
 board.push([]);
 for(var j = 0; j < 50; j++){
-  board[i].push({value:null,char:[]});
+board[i].push({value:null,char:[]});
 }
 }
 }
@@ -210,11 +210,11 @@ wordBank.push(new WordObj(wordArr[i]));
 
 for(i = 0; i < wordBank.length; i++){
 for(var j = 0, wA=wordBank[i]; j<wA.char.length; j++){
-  for(var k = 0, cA=wA.char[j]; k<wordBank.length; k++){
-    for(var l = 0,wB=wordBank[k]; k!==i && l<wB.char.length; l++){
-      wA.totalMatches += (cA === wB.char[l])?1:0;
-    }
+for(var k = 0, cA=wA.char[j]; k<wordBank.length; k++){
+  for(var l = 0,wB=wordBank[k]; k!==i && l<wB.char.length; l++){
+    wA.totalMatches += (cA === wB.char[l])?1:0;
   }
+}
 }
 }  
 }
@@ -227,9 +227,9 @@ var i, len, curIndex, curWord, curChar, curMatch, testWord, testChar, minMatchDi
 if(wordsActive.length < 1){
 curIndex = 0;
 for(i = 0, len = wordBank.length; i < len; i++){
-  if (wordBank[i].totalMatches < wordBank[curIndex].totalMatches){
-    curIndex = i;
-  }
+if (wordBank[i].totalMatches < wordBank[curIndex].totalMatches){
+  curIndex = i;
+}
 }
 wordBank[curIndex].successfulMatches = [{x:12,y:12,dir:0}];
 }
@@ -238,100 +238,100 @@ else{
 curIndex = -1;
 
 for(i = 0, len = wordBank.length; i < len; i++){
-  curWord = wordBank[i];
-  //console.log(curWord);
-  curWord.effectiveMatches = 0;
-  curWord.successfulMatches = [];
-  for(var j = 0, lenJ = curWord.char.length; j < lenJ; j++){
-    curChar = curWord.char[j];
-    for (var k = 0, lenK = wordsActive.length; k < lenK; k++){
-      testWord = wordsActive[k];
-      for (var l = 0, lenL = testWord.char.length; l < lenL; l++){
-        testChar = testWord.char[l];
-        if (curChar === testChar){
-          curWord.effectiveMatches++;              
-          var curCross = {x:testWord.x,y:testWord.y,dir:0};              
-          if(testWord.dir === 0){                
-            curCross.dir = 1;
-            curCross.x += l;
-            curCross.y -= j;
-          } 
-          else{
-            curCross.dir = 0;
-            curCross.y += l;
-            curCross.x -= j;
-          }
-          
-          var isMatch = true;
-          
-          for(var m = -1, lenM = curWord.char.length + 1; m < lenM; m++){
-            var crossVal = [];
-            if (m !== j){
-              if (curCross.dir === 0){
-                var xIndex = curCross.x + m;
-                
-                if (xIndex < 0 || xIndex > board.length){
-                  isMatch = false;
-                  break;
-                }
-                
-                crossVal.push(board[xIndex][curCross.y].value);
-                crossVal.push(board[xIndex][curCross.y + 1].value);
-                crossVal.push(board[xIndex][curCross.y - 1].value);
-              }
-              else{
-                var yIndex = curCross.y + m;
-                
-                if (yIndex < 0 || yIndex > board[curCross.x].length){
-                  isMatch = false;
-                  break;
-                }
-                
-                crossVal.push(board[curCross.x][yIndex].value);
-                crossVal.push(board[curCross.x + 1][yIndex].value);
-                crossVal.push(board[curCross.x - 1][yIndex].value);
-              }
+curWord = wordBank[i];
+//console.log(curWord);
+curWord.effectiveMatches = 0;
+curWord.successfulMatches = [];
+for(var j = 0, lenJ = curWord.char.length; j < lenJ; j++){
+  curChar = curWord.char[j];
+  for (var k = 0, lenK = wordsActive.length; k < lenK; k++){
+    testWord = wordsActive[k];
+    for (var l = 0, lenL = testWord.char.length; l < lenL; l++){
+      testChar = testWord.char[l];
+      if (curChar === testChar){
+        curWord.effectiveMatches++;              
+        var curCross = {x:testWord.x,y:testWord.y,dir:0};              
+        if(testWord.dir === 0){                
+          curCross.dir = 1;
+          curCross.x += l;
+          curCross.y -= j;
+        } 
+        else{
+          curCross.dir = 0;
+          curCross.y += l;
+          curCross.x -= j;
+        }
 
-              if(m > -1 && m < lenM-1){
-                if (crossVal[0] !== curWord.char[m]){
-                  if (crossVal[0] !== null){
-                    isMatch = false;                  
-                    break;
-                  }
-                  else if (crossVal[1] !== null){
-                    isMatch = false;
-                    break;
-                  }
-                  else if (crossVal[2] !== null){
-                    isMatch = false;                  
-                    break;
-                  }
-                }
-              }
-              else if (crossVal[0] !== null){
-                isMatch = false;                  
+        var isMatch = true;
+
+        for(var m = -1, lenM = curWord.char.length + 1; m < lenM; m++){
+          var crossVal = [];
+          if (m !== j){
+            if (curCross.dir === 0){
+              var xIndex = curCross.x + m;
+
+              if (xIndex < 0 || xIndex > board.length){
+                isMatch = false;
                 break;
               }
+
+              crossVal.push(board[xIndex][curCross.y].value);
+              crossVal.push(board[xIndex][curCross.y + 1].value);
+              crossVal.push(board[xIndex][curCross.y - 1].value);
+            }
+            else{
+              var yIndex = curCross.y + m;
+
+              if (yIndex < 0 || yIndex > board[curCross.x].length){
+                isMatch = false;
+                break;
+              }
+
+              crossVal.push(board[curCross.x][yIndex].value);
+              crossVal.push(board[curCross.x + 1][yIndex].value);
+              crossVal.push(board[curCross.x - 1][yIndex].value);
+            }
+
+            if(m > -1 && m < lenM-1){
+              if (crossVal[0] !== curWord.char[m]){
+                if (crossVal[0] !== null){
+                  isMatch = false;                  
+                  break;
+                }
+                else if (crossVal[1] !== null){
+                  isMatch = false;
+                  break;
+                }
+                else if (crossVal[2] !== null){
+                  isMatch = false;                  
+                  break;
+                }
+              }
+            }
+            else if (crossVal[0] !== null){
+              isMatch = false;                  
+              break;
             }
           }
-          
-          if (isMatch === true){                
-            curWord.successfulMatches.push(curCross);
-          }
+        }
+
+        if (isMatch === true){                
+          curWord.successfulMatches.push(curCross);
         }
       }
     }
   }
-  
-  curMatchDiff = curWord.totalMatches - curWord.effectiveMatches;
-  
-  if (curMatchDiff<minMatchDiff && curWord.successfulMatches.length>0){
-    curMatchDiff = minMatchDiff;
-    curIndex = i;
-  }
-  else if (curMatchDiff <= 0){
-    return false;
-  }
+}
+
+curMatchDiff = curWord.totalMatches - curWord.effectiveMatches;
+
+if (curMatchDiff<minMatchDiff && curWord.successfulMatches.length>0){
+  curMatchDiff = minMatchDiff;
+  curIndex = i;
+}
+else if (curMatchDiff <= 0){
+  return false;
+}
 
 }
 }
@@ -344,10 +344,10 @@ var spliced = wordBank.splice(curIndex, 1);
 wordsActive.push(spliced[0]);
 
 var pushIndex = wordsActive.length - 1,
-  rand = Math.random(),
-  matchArr = wordsActive[pushIndex].successfulMatches,
-  matchIndex = Math.floor(rand * matchArr.length),  
-  matchData = matchArr[matchIndex];
+rand = Math.random(),
+matchArr = wordsActive[pushIndex].successfulMatches,
+matchIndex = Math.floor(rand * matchArr.length),  
+matchData = matchArr[matchIndex];
 
 wordsActive[pushIndex].x = matchData.x;
 wordsActive[pushIndex].y = matchData.y;
@@ -358,16 +358,16 @@ var prevObj = null;
 
 for(i = 0, len = wordsActive[pushIndex].char.length; i < len; i++){
 var cObj,
-    cIndex,
-    xInd = matchData.x,
-    yInd = matchData.y;
+  cIndex,
+  xInd = matchData.x,
+  yInd = matchData.y;
 
 if (matchData.dir === 0){ xInd = matchData.x + i; }
 else{ yInd = matchData.y + i; }
-    
+
 cObj = {wordIndex:pushIndex,prev:prevObj,
-        value:wordsActive[pushIndex].char[i],next:null};
-           
+      value:wordsActive[pushIndex].char[i],next:null};
+
 cIndex = board[xInd][yInd].char.length;
 
 board[xInd][yInd].char.push(cObj);
@@ -376,7 +376,7 @@ board[xInd][yInd].value = wordsActive[pushIndex].char[i];
 Bounds.Update(xInd,yInd);
 
 if (prevObj !== null){
-  prevObj.next = board[xInd][yInd].char[cIndex];
+prevObj.next = board[xInd][yInd].char[cIndex];
 }
 
 prevObj = board[xInd][yInd].char[cIndex];   
@@ -394,7 +394,7 @@ boardMap = [];
 for(var i=Bounds.top-1, str=""; i<Bounds.bottom+2; i++){
 str+="<div class='row'>";
 for(var j=Bounds.left-1; j<Bounds.right+2; j++){
-  str += BoardCharToElement(board[j][i]);
+str += BoardCharToElement(board[j][i]);
 }
 str += "</div>";
 }
@@ -411,29 +411,29 @@ if (c.value !== null){
 var num = "";
 
 for(var i=0 ; i < c.char.length; i++){
-  c.char[i].index = boardMap.length;
-  if (c.char[i].prev === null){
-    var matchingObj = wordsActive[c.char[i].wordIndex];
-    
-    if (num === ""){
-        num = wordElementsDown.length + wordElementsAcross.length + 1;
-    }        
-    if (matchingObj.dir === 0){
-      wordElementsAcross.push({num:num,ele:matchingObj.element});
-    }
-    else{
-      wordElementsDown.push({num:num,ele:matchingObj.element});
-    }
+c.char[i].index = boardMap.length;
+if (c.char[i].prev === null){
+  var matchingObj = wordsActive[c.char[i].wordIndex];
+
+  if (num === ""){
+      num = wordElementsDown.length + wordElementsAcross.length + 1;
+  }        
+  if (matchingObj.dir === 0){
+    wordElementsAcross.push({num:num,ele:matchingObj.element});
   }
+  else{
+    wordElementsDown.push({num:num,ele:matchingObj.element});
+  }
+}
 }
 boardMap.push(c);
 
 inner = EleStr('input', [{a:'type',v:['text']},
-                         {a:'class',v:['char']},
-                         {a:'maxlength',v:['1']},
-                         {a:'data-letter',v:[c.value]},
-                         {a:'placeholder',v:[c.value]}],
-               EleStr('span', [{a:'class',v:['num']}],num));
+                       {a:'class',v:['char']},
+                       {a:'maxlength',v:['1']},
+                       {a:'data-letter',v:[c.value]},
+                       {a:'placeholder',v:[c.value]}],
+             EleStr('span', [{a:'class',v:['num']}],num));
 }
 return EleStr('div',[{a:'class',v:['square']}],inner);
 }
@@ -446,10 +446,10 @@ return;
 
 if (boardChar.char.length > 1){
 if (focusIndex >= boardChar.char.length-1){
-  focusIndex = 0;
+focusIndex = 0;
 }
 else{
-  focusIndex++;
+focusIndex++;
 }
 }
 }
@@ -471,21 +471,21 @@ return;
 var key = e.keyCode || e.which;
 
 if (key === 8){
-  if (boardChar.char[focusIndex].prev != null){
-    focusChar = boardChar.char[focusIndex].prev;
-    
-    var isEnd = (boardChar.char[focusIndex].next === null)?true:false;
-    
+if (boardChar.char[focusIndex].prev != null){
+  focusChar = boardChar.char[focusIndex].prev;
+
+  var isEnd = (boardChar.char[focusIndex].next === null)?true:false;
+
+  document.getElementsByClassName('char')
+  [boardChar.char[focusIndex].prev.index].focus();
+
+  if (isEnd){
     document.getElementsByClassName('char')
-    [boardChar.char[focusIndex].prev.index].focus();
-    
-    if (isEnd){
-      document.getElementsByClassName('char')
-      [boardChar.char[focusIndex].index].value = "";
-      document.getElementsByClassName('char')
-      [boardChar.char[focusIndex].next.index].value = "";
-    }
+    [boardChar.char[focusIndex].index].value = "";
+    document.getElementsByClassName('char')
+    [boardChar.char[focusIndex].next.index].value = "";
   }
+}
 }
 }
 
@@ -494,9 +494,9 @@ if (mode === 1){
 return;
 }
 if (boardChar.char[focusIndex].next !== null){
-  focusChar = boardChar.char[focusIndex].next;
-  document.getElementsByClassName('char')
-  [boardChar.char[focusIndex].next.index].focus();
+focusChar = boardChar.char[focusIndex].next;
+document.getElementsByClassName('char')
+[boardChar.char[focusIndex].next.index].focus();
 }
 }
 }
@@ -540,13 +540,13 @@ ele.onfocus = CreateCallback("focus", boardChar);
 function CreateCallback(type, boardChar) {
 switch(type){
 case "click":
-  return function() {
-    BoardCharClick(boardChar);
-  };
+return function() {
+  BoardCharClick(boardChar);
+};
 case "focus":
-  return function() {
-    BoardCharFocus(boardChar);
-  };
+return function() {
+  BoardCharFocus(boardChar);
+};
 }
 }
 
@@ -601,15 +601,14 @@ Play();
 //==================================================//
 
 $( "#btnCheck" ).click(function() {
-  $( ".square input" ).each(function() {
-         if (!($(this).attr('data-letter') === ($(this).val().toUpperCase()))) {
-               console.log('incorrect');
-            $(this).val('');
-        } 
+$( ".square input" ).each(function() {
+       if (!($(this).attr('data-letter') === ($(this).val().toUpperCase()))) {
+             console.log('incorrect');
+          $(this).val('');
+      } 
 });
 });
 
 $('#btnReset').click(function() {
 location.reload();
 });
-
