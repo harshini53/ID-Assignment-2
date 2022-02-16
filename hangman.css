@@ -1,12 +1,11 @@
 /* Variabes */
 /* Mixin's */
 body {
-    background: #c1d72e;
+    background: white;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    color: #fff;
+    color: #E1BEE7;
     height: 100%;
     text-align: center;
-    font-size: 18px;
 }
 .wrappper {
     width: 100%;
@@ -39,9 +38,8 @@ canvas {
     list-style: none;
     width: 35px;
     height: 30px;
-    padding-top: 10px;
     background: #fff;
-    color: #c1d72e;
+    color: #E1BEE7;
     cursor: pointer;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -69,7 +67,6 @@ canvas {
     font-size: 1.6em;
 }
 
-/* Errors that need to be fixed
 .active {
     opacity: 0.4;
     filter: alpha(opacity=40);
@@ -91,7 +88,6 @@ canvas {
 */
 
 #mylives {
-    font-size: 1.6em;
     text-align: center;
     display: block;
 }

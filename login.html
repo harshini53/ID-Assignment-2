@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
 
     <title>Login</title>
+    <link rel="icon" href="images/icon.png">
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
 
 
@@ -21,11 +22,16 @@
       <input class="un text-white-50" type="text" placeholder="Username" id="login-username" required>
       <input class="pass text-center" type="password" placeholder="Password" id="login-password" required>
       <a class="submit text-center" id="loginSubmitButton" >Log In</a>
+      <p id ="errMsgLogin"></p>
       <p id="exist-error-name"></p>
       <p id="exist-error-pwd"></p>
       <p class="signup text-center">Don't have an account? <a href="signup.html">Sign Up</p>
     </div>
      
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"crossorigin="anonymous"></script>
   <script src="script.js"></script>
   <script src="loginapi.js"></script>
 </body>
