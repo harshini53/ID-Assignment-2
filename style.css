@@ -175,6 +175,7 @@ b {
 	.main {
 		border-radius: 0px;
 	}
+}
 .contactdetails{
 	background: linear-gradient(to right, #9C27B0, #E040FB);
 }
@@ -191,10 +192,6 @@ b {
 	color: white;
   }
   
-
-
-
-
 
 
 
@@ -294,14 +291,14 @@ b {
 	opacity: 0;
 	transition: .5s ease;
 	background-color: whitesmoke;
-  }
+}
   
-  .col-sm-6:hover .overlay {
+.col-sm-6:hover .overlay {
 	opacity: 1;
-  }
-  .gbtn{
+}
+
+.gbtn{
 	position: absolute;
 	top: 50%;
 	left: 40%;
-  }
 }
