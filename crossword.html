@@ -3,43 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
-    <meta name="description" content="Contact">
+    <meta name="description" content="games">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <title>Contact Us</title>
-    <title>Scitastic</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     
-    <link href="crosswordstyle.css" rel="stylesheet" type="text/css" />
+    <title>Crossword</title>
+    <link rel="icon" href="images/icon.png">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="crosswordstyle.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
   </head>
   <body>
-    <nav class="navbar navbar-inverse bg-light">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">SciFind</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="discover_page1.html">Topic 1-1</a></li>
-          <li><a href="#">Topic 1-2</a></li>
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Scitastic</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="discover_page1.html">Topic 1-1</a></li>
+              <li><a href="discover_page2.html">Topic 1-2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Games</a></li>
+          <li><a href="leadership_board.html">Leaderboard</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
         </ul>
-      </li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="leadership_board.html">Leaderboard</a></li>
-      <li><a href="contact_us.html">Contact</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Login</button>
-  </ul>
-  </div>
-</nav>
- <div class="cwcontainer crosswordDisplay">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
+      </ul>
+      </div>
+    </nav>
+    
 
+ <div class="cwcontainer crosswordDisplay">
+  <br><br><br><br><br>
 <div class="row">
+  <div class="row">
+    
 <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
     <div class="btn btn-default disabled" id="btnCreate">Create</div>
     <div class="btn btn-default disabled" id="btnPlay">Play</div>
@@ -51,9 +57,13 @@
   <div class="center crossword" id="crossword"></div>
 
 <div class="btn" id="btnGen">Generate</div>
+</div>
 
+<div class="btn btn-default" id="btnReset">Reset</div>
+     <div class="btn btn-default" id="btnCheck">Check Answers</div>
 
-  <div class="col-lg-6 ">
+<div class="row">
+  <div class="center across">
   <div class="clueBlock" id="cluesAcross">
     <div class="clueDirection" id="directionAcross">ACROSS</div>
 
@@ -179,20 +189,20 @@
 
     </div>
 
-
   </div>
 
 
-  <div class="col-lg-6">
+  <div class="center down">
   <div class="clueBlock" id="cluesDown">
     <div class="clueDirection" id="directionDown">DOWN</div>
   </div>
-
+  </div>
 </div>
 </div>
 <div class ="footer">
-  <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
-</div>
+  <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+  <br>- All Rights Reserved.
+</div> 
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
