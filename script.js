@@ -33,9 +33,11 @@ $(document).ready(function() {
   });
 });
 
+
 //Timer
 var timeInSecs;
 var ticker;
+
 
 function startTimer(secs) {
   timeInSecs = parseInt(secs);
@@ -54,9 +56,10 @@ else {
 
 var mins = Math.floor(secs/60);
 secs %= 60;
-var pretty = ( (mins < 10) ? "0" : "" ) + mins + ":" + ( (secs < 10) ? "0" : "" ) + secs;
+var time = ( (mins < 10) ? "0" : "" ) + mins + ":" + ( (secs < 10) ? "0" : "" ) + secs;
 
-document.getElementById("countdown").innerHTML = pretty;
+document.getElementById("countdown").innerHTML = time;
 }
 
 startTimer(2*60); // 2 minutes in seconds
+
