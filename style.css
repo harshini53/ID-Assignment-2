@@ -1,18 +1,12 @@
+/*-------------------------All pages------------------------------*/
 .footer {
-	position: fixed;
 	left: 0;
 	bottom: 0;
+	height: 5em;
 	width: 100%;
 	background-color: black;
 	color: white;
 	text-align: center;
-  }
-  .navbar{
-	  color: darkgray ;
-  }
-  
-  .glyphicon{
-	  size: 50px;
   }
 
   .ctn .btn {
@@ -29,55 +23,15 @@
 	cursor: pointer;
 	border-radius: 5px;
   }
-  .top-left {
-	position: absolute;
-	top: 15%;
-	left:10%;
-	color: white;
-	font-size: 20px;
-	font-family: 'Oswald'
-  }
-  .underline{
-	position: absolute;
-	top: 20%;
-	left:10%;
-	color: white;
-	font-size: 20px;
-	font-family: 'Oswald'
-  }
-  .centered {
-	position: absolute;
-	top: 50%;
-	left: 45%;
-	color: white;
-	font-size: 70px;
-	font-family: 'Oswald'
-  }
-.pupil-object{
-	position: absolute;
-    top: 140.5%;
-    left: 70.1%;
-    font-size: 38px;
+
+  .inner-ctn{
+	height: auto;
+	width: 80%;
+	text-align: center;
+	display: inline-block;
 }
-.iris-object{
-	position: absolute;
-    top: 118.9%;
-    left: 70.1%;
-    font-size: 38px;
-}
-.cornea-object{
-	position: absolute;
-    top: 239.5%;
-    left: 10%;
-    font-size: 33px;
-}
-.optic-object{
-	position: absolute;
-    top: 241.3%;
-    left: 77.2%;
-    font-size: 37px;
-}
-/*log in and sign up form*/
+
+  /*----------------------------log in and sign up form-----------------------------------------*/
 
 .main {
 	background-color: #FFFFFF;
@@ -199,9 +153,122 @@ b {
 		border-radius: 0px;
 	}
 }
+/*-------------------index.html----------------------------*/
+.search-container{
+	position: absolute;
+	top: 85%;
+	left: 68%;
+  }
+  .search-container [type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+  }
+  .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+  }
+  .search-container button:hover {
+	background: #ccc;
+  }
+  @media screen and (max-width: 600px) {
+	.search-container {
+		float: none;
+	  }
+	  .search-container[type=text], .search-container button {
+		float: none;
+		display: block;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		padding: 14px;
+	  }
+	  .search-container input[type=text] {
+		border: 1px solid #ccc;  
+	  }
+	}
+/*----------------contact_us.html-------------------*/
 .contactdetails{
 	background: linear-gradient(to right, #9C27B0, #E040FB);
 }
+lottie{
+	justify-content: center;
+	align-items: center;
+
+}
+  
+/*-------------discovery1/2.html--------------------*/
+  .top-left {
+	position: absolute;
+	top: 15%;
+	left:10%;
+	color: white;
+	font-size: 20px;
+	font-family: 'Oswald'
+  }
+  .underline{
+	position: absolute;
+	top: 20%;
+	left:10%;
+	color: white;
+	font-size: 20px;
+	font-family: 'Oswald'
+  }
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	color: white;
+	font-size: 70px;
+	font-family: 'Oswald'
+  }
+  .div-2-centered {
+	position: absolute;
+	top: 48%;
+	left: 33%;
+	color: white;
+	font-size: 70px;
+	font-family: 'Oswald'
+  }
+
+.pupil-object{
+	position: absolute;
+    top: 140.5%;
+    left: 70.1%;
+    font-size: 38px;
+	color: red;
+}
+.iris-object{
+	position: absolute;
+    top: 118.9%;
+    left: 70.1%;
+    font-size: 38px;
+	color: red;
+}
+.cornea-object{
+	position: absolute;
+    top: 239.5%;
+    left: 9.8%;
+    font-size: 33px;
+	color: red;
+}
+.optic-object{
+	position: absolute;
+    top: 241.3%;
+    left: 77.1%;
+    font-size: 37px;
+	color: red;
+}
+
+
+
 
 
 
@@ -312,8 +379,7 @@ b {
   /*Game buttons*/
 
   .button {
-	background-color: #E1BEE7; /* Green */
-	border: none;
+	background-color: #E1BEE7; 
 	padding: 10px 25px;
 	text-align: center;
 	transition-duration: 0.4s;
@@ -325,4 +391,4 @@ b {
 	background-color: #E1BEE7;
 	color: white;
   }
-  
+ 
