@@ -1,24 +1,6 @@
-/**
-* Wordfind.js 0.0.1
-* (c) 2012 Bill, BunKat LLC.
-* Wordfind is freely distributable under the MIT license.
-* For all details and documentation:
-*     https://github.com/bunkat/wordfind
-*/
-
 (function () {
 
   'use strict';
-
-  /**
-  * Generates a new word find (word search) puzzle provided a set of words.
-  * Can automatically determine the smallest puzzle size in which all words
-  * fit, or the puzzle size can be manually configured.  Will automatically
-  * increase puzzle size until a valid puzzle is found.
-  *
-  * WordFind has no dependencies.
-  */
-
   /**
   * Initializes the WordFind object.
   *
@@ -28,12 +10,6 @@
 
     // Letters used to fill blank spots in the puzzle
     var letters = 'abcdefghijklmnoprstuvwy';
-
-    /**
-    * Definitions for all the different orientations in which words can be
-    * placed within a puzzle. New orientation definitions can be added and they
-    * will be automatically available.
-    */
 
     // The list of all the possible orientations
     var allOrientations = ['horizontal','horizontalBack','vertical','verticalUp',
@@ -305,10 +281,7 @@
       orientations: orientations,
 
       /**
-      * Generates a new word find (word search) puzzle.
-      *
       * Settings:
-      *
       * height: desired height of the puzzle, default: smallest possible
       * width:  desired width of the puzzle, default: smallest possible
       * orientations: list of orientations to use, default: all orientations
@@ -463,16 +436,8 @@
 
   'use strict';
 
-  /**
-  * An example game using the puzzles created from wordfind.js. Click and drag
-  * to highlight words.
-  *
-  * WordFindGame requires wordfind.js and jQuery.
-  */
-
-  /**
+  /**Highlight words.
   * Initializes the WordFindGame object.
-  *
   * @api private
   */
   var WordFindGame = function() {
@@ -529,10 +494,8 @@
 
     /**
     * Game play events.
-    *
     * The following events handle the turns, word selection, word finding, and
     * game end.
-    *
     */
 
     // Game state
@@ -549,8 +512,6 @@
       selectedSquares.push(this);
       curWord = $(this).text();
     };
-
-
 
     /**
     * Event that handles mouse over on a new square. Ensures that the new square
@@ -665,7 +626,7 @@
     *
     */
     var endTurn = function () {
-
+    var score = 0;
       // see if we formed a valid word
       for (var i = 0, len = wordList.length; i < len; i++) {
         
@@ -673,12 +634,14 @@
           $('.selected').addClass('found');
           wordList.splice(i,1);
           $('.' + curWord).addClass('wordFound');
+          score = (50 - (wordList.length)*10);
         }
-
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');
         }
       }
+      console.log(wordList);
+      console.log(score);
 
       // reset the turn
       $('.selected').removeClass('selected');
@@ -686,6 +649,8 @@
       selectedSquares = [];
       curWord = '';
       curOrientation = null;
+
+      console.log(score);
     };
 
     /**
@@ -796,8 +761,7 @@
 }(document, jQuery, wordfind));
 
 $(function () {
-  var words = ['save', 'earn', 'invest', 'retirement', 'account', 'money', 'credit', 'debt', 'assets', 'loan', 'interest', 'accrual',
- 'economy', 'sharing', 'savings', 'budget', 'capital', 'collateral', 'bond', 'market', 'value', 'index'];
+  var words = ['save', 'earn', 'invest', 'retirement', 'account'];
   // start a word find game
   var gamePuzzle = wordfindgame.create(
     words, 
