@@ -9,7 +9,6 @@ $(document).ready(function(){
 });
 
 
-
 //---------------------------------//
 //   GLOBAL VARIABLES              //
 //---------------------------------//
@@ -172,6 +171,7 @@ function GetWordsFromInput(){
     val = w[i].getElementsByClassName("word")[0].value.toUpperCase();
     if (val !== null && val.length > 1){wordArr.push({ele:w[i],value:val});}
   }
+  console.log(GetWordsFromInput);
 }
 
 
@@ -581,16 +581,23 @@ Play();
 
 
 //==================================================//
+var score_crossword = 60;
 
 $( "#btnCheck" ).click(function() {
   $( ".square input" ).each(function() {
     if (!($(this).attr('data-letter') === ($(this).val().toUpperCase()))) {
       console.log('incorrect');
       $(this).val('');
+      score_crossword -= 10;  
+      console.log(score_crossword);
       } 
   });
 });
 
+console.log(score_crossword);
+
 $('#btnReset').click(function() {
   location.reload();
 });
+
+export{score_crossword}
