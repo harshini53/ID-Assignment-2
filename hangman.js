@@ -12,7 +12,7 @@ window.onload = function () {
     var guess ;             // Guess
     var geusses = [ ];      // Stored guesses
     var lives ;             // Lives
-    var counter ;           // Count correct geusses
+    var counter ;           // Count correct guesses
     var space;              // Number of spaces in word '-'
   
     // Get elements
@@ -20,6 +20,7 @@ window.onload = function () {
     var showCatagory = document.getElementById("scatagory");
     var getHint = document.getElementById("hint");
     var showClue = document.getElementById("clue");
+    var score_hangman = document.getElementById("score");
   
   
   
@@ -104,7 +105,7 @@ window.onload = function () {
       }
       for (var i = 0; i < geusses.length; i++) {
         if (counter + space === geusses.length) {
-          showLives.innerHTML = "You Win!";
+          showLives.innerHTML = "You win!";
         }
       }
     }
@@ -190,7 +191,8 @@ window.onload = function () {
           if (word[i] === geuss) {
             geusses[i].innerHTML = geuss;
             counter += 1;
-          } 
+            score_hangman = counter * 10
+          }
         }
         var j = (word.indexOf(geuss));
         if (j === -1) {
@@ -200,6 +202,8 @@ window.onload = function () {
         } else {
           comments();
         }
+        console.log(score_hangman);
+        score_hangman.innerHTML = "Score: " + score_hangman
       }
     }
     
@@ -236,6 +240,7 @@ window.onload = function () {
     }
   
     play();
+    //startTimer();
     
     // Hint
   
@@ -257,7 +262,7 @@ window.onload = function () {
   
       var catagoryIndex = categories.indexOf(chosenCategory);
       var hintIndex = chosenCategory.indexOf(word);
-      showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+      showClue.innerHTML = "Clue: " +  hints [catagoryIndex][hintIndex];
     };
   
      // Reset
@@ -270,6 +275,8 @@ window.onload = function () {
       play();
     }
   }
-  
+
+
+export{score_hangman}
   
   

@@ -7,118 +7,63 @@
   <meta name="description" content="Contact">
   <meta name="viewport" content="width=device-width, inital-scale=1.0">
   
-  <title>Contact Us</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Leaderboard</title>
   <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><em>Sci</em>stastic</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="discover_page1.html">Discover Page</a></li>
-                <li><a href="#">Topic 1-2</a></li>
-              </ul>
-            </li>
-            <li><a href="games.html">Games</a></li>
-            <li><a href="#">Leaderboard</a></li>
-            <li><a href="contact_us.html">Contact</a></li>
+
+  <nav class="navbar navbar-light">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Scitastic</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="discover_page1.html">Topic 1-1</a></li>
+            <li><a href="discover_page2.html">Topic 1-2</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
-        </div>
-      </nav>
-    <div style = "text-align: left;"class="row sizecontact center"><br><br>
-
-        <h2 style="text-align: center;">Leaderboard</h2>
-        <div class="container">
-             <!--Created table to display things-->
-             <table border="1" style="border-collapse:collapse" class="table" id="contact-list">
-
-                <tr style="background-color: black;color: white;">
-                    <th colspan="1">Rank</th>
-                    <th>Username</th>
-                    <th>Level</th>
-                    <th>Score</th>
-                </tr>
-
-                <tr>
-                    <td class="Rank">$$$</td>
-                    <td class = "Name"></td>
-                    <td class="Level"></td>
-                    <td class="Score"></td>
-                </tr>
-
-                
-            </table>
-
-        </div>
-
-
-        <div class ="footer">
-            <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
-          </div>
-        
-         <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      
-    <section class="forms-section">
-  <div class="forms">
-    <div class="form-wrapper is-active">
-      <button type="button" class="switcher switcher-login">
-        Login
-        <span class="underline"></span>
-      </button>
-      <form class="form form-login">
-        <fieldset>
-          <div class="input-block">
-            <label for="login-email">E-mail</label>
-            <input id="login-email" type="email" required>
-          </div>
-          <div class="input-block">
-            <label for="login-password">Password</label>
-            <input id="login-password" type="password" required>
-          </div>
-        </fieldset>
-        <button type="submit" class="btn-login">Login</button>
-      </form>
+        </li>
+        <li><a href="#">Games</a></li>
+        <li><a href="leadership_board.html">Leaderboard</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
+    </ul>
     </div>
-    <div class="form-wrapper">
-      <button type="button" class="switcher switcher-signup">
-        Sign Up
-        <span class="underline"></span>
-      </button>
-      <form class="form form-signup">
-        <fieldset>
-          <div class="input-block">
-            <label for="signup-email">E-mail</label>
-            <input id="signup-email" type="email" required>
-          </div>
-          <div class="input-block">
-            <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" required>
-          </div>
-          <div class="input-block">
-            <label for="signup-password-confirm">Confirm password</label>
-            <input id="signup-password-confirm" type="password" required>
-          </div>
-        </fieldset>
-        <button type="submit" class="btn-signup">Continue</button>
-      </form>
+  </nav>
+    
+  <div style = "text-align: left;"class="row sizecontact center"><br><br>
+    <h2 style="text-align: center;">Leaderboard</h2>
+    <div class="container">
+          <!--Created table to display things-->
+          <table border="1" style="border-collapse:collapse" class="table" id="leadership_Board">
+            <thead>
+            <tr style="background-color: black;color: white;">
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-  </div>
-</section>
+
+
+    <div class ="footer">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div> 
+           
     <script src="script.js"></script>
-    <script src="WebApis.js"></script>
+    <script src="loginapi.js"></script>
 </body>
 </html>

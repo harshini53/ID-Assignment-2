@@ -626,7 +626,7 @@
     *
     */
     var endTurn = function () {
-    var score = 0;
+    var score_wordsearch = 0;
       // see if we formed a valid word
       for (var i = 0, len = wordList.length; i < len; i++) {
         
@@ -634,14 +634,13 @@
           $('.selected').addClass('found');
           wordList.splice(i,1);
           $('.' + curWord).addClass('wordFound');
-          score = (50 - (wordList.length)*10);
+          score_wordsearch = (50 - (wordList.length)*10);
         }
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');
         }
       }
-      console.log(wordList);
-      console.log(score);
+      console.log(score_wordsearch);
 
       // reset the turn
       $('.selected').removeClass('selected');
@@ -650,7 +649,6 @@
       curWord = '';
       curOrientation = null;
 
-      console.log(score);
     };
 
     /**
@@ -780,5 +778,10 @@ $(function () {
     {height: 5, width:15, fillBlanks: true}
   );
   wordfind.print(puzzle);
+  
 });
+
+
+export{score_wordsearch}
+
 
