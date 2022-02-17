@@ -9,79 +9,94 @@
     <title>Games</title>
     <link rel="icon" href="images/icon.png">
     
+    <!--External Style Sheets-->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
   </head>
 
   <body>
+
+    <!--Navigation Bar-->
     <nav class="navbar navbar-light">
       <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a></a>
+          <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a></li>
-          <ul class="dropdown-menu">
-            <li><a href="discover_page1.html">Topic 1-1</a></li>
-            <li><a href="discover_page2.html">Topic 1-2</a></li>
-          </ul>
-          <li><a href="#">Games</a></li>
-          <li><a href="leadership_board.html">Leaderboard</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="discover_page1.html">Topic 1-1</a></li>
+              <li><a href="discover_page2.html">Topic 1-2</a></li>
+            </ul>
+          </li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leader_board.html">Leaderboard</a></li>
           <li><a href="contact_us.html">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
+          <li><a href="login.html"><span class="glyphicon glyphicon-user" id="account_pic"></span></a>
+          <li><a href="account.html"><span id="account-username"></span></a></li>
         </ul>
-      </div>  
+      </div>
     </nav>
 
-<div class="center">
-    <h3><b>Try Out These Games!</b></h3>
-    <p>Discover some of our games that are specially designed for secondary students to help you understand 
+
+    <div class="center">
+      <!--Heading-->
+      <h3><b>Try Out These Games!</b></h3>
+      <p>
+        Discover some of our games that are specially designed for secondary students to help you understand 
         the concept of respiratory system in a fun and interesting way. Try out by clicking on one of the games 
         below!
-    </p><br>
-  </div>
-
-<div class="center row" style="margin-left: 125px;">
-<div class="card"><br>
-    <h4><b>CROSSWORD PUZZLE</b></h4>
-    <img src="images/crossword.jpeg" alt="Crossword" style="width:270px">
-    <div class="containerCard">
-      <button onclick="function_crossword()" class="button">Play Now</button>
+      </p><br>
     </div>
-  </div>
 
-  <div class="card"><br>
-    <h4><b>HANGMAN</b></h4>
-    <img src="images/crossword.jpeg" alt="Crossword" style="width:270px">
-    <div class="containerCard">
-        <button onclick="function_hangman()" class="button">Play Now</button>
-    </div>
-  </div>
+    <div class="center row" style="margin-left: 125px;">
+      
+      
+      <!--Game 1: Crossword-->
+      <div class="card"><br>
+        <h4><b>CROSSWORD PUZZLE</b></h4>
+        <img src="images/crossword.jpeg" alt="Crossword" style="width:270px">
+        <div class="containerCard">
+          <button onclick="function_crossword()" class="button">Play Now</button>
+        </div>
+      </div>
 
-  
-<div class="card"><br>
-    <h4><b>WORDSEARCH</b></h4>
-    <img src="images/crossword.jpeg" alt="Crossword" style="width:270px">
-    <div class="containerCard">
-        <button class="button">Play Now</button>
-    </div>
-  </div>
-</div>
+      <!--Game 2: Hangman-->
+      <div class="card"><br>
+        <h4><b>HANGMAN</b></h4>
+        <img src="images/crossword.jpeg" alt="Crossword" style="width:270px">
+        <div class="containerCard">
+          <button onclick="function_hangman()" class="button">Play Now</button>
+        </div>
+      </div>
 
-<br><br><br><br><br>
+      <!--Game 3: Word Search-->
+        <div class="card"><br>
+          <h4><b>WORD SEARCH</b></h4>
+          <img src="images/crossword.jpeg" alt="Crossword" style="width:270px">
+          <div class="containerCard">
+            <button class="button">Play Now</button>
+          </div>
+        </div>
+      </div>
 
-  <div class ="footer">
-    <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
-    <br>- All Rights Reserved.
-  </div>  
+    <!--Leave spaces-->
+    <br><br><br><br><br>
 
-    <script src="script.js"></script>
-</body>
+    <!--Footer-->
+    <div class ="footer">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div>  
 
+    <!--JavaScripts-->
+    <script src="js/script.js"></script>
+
+  </body>
 </html>
