@@ -174,15 +174,29 @@ const login = JSON.parse(localStorage.getItem('login'));
 
 $(document).ready(function() {
 
-    $('#account-username').html(login[1]); // Set it to account name
-
     $("#loginSubmitButton").click(function(){
-        loginToAccount()
+        loginToAccount();
     });
 
     $("#registerSubmitButton").click(function(){
-        createAccount()
+        createAccount();
     });
+
+    $("#logout").click(function(){
+        localStorage.clear();
+        location.href="index.html"
+    });
+
+    $('#account-username').html(login[1]); // Set it to account name
+    console.log(login)
+    $('#account-email').html(login[3]);
+    $('#account-password').html(login[4]);
+    $('#account-score').html(login[2]);
+
+    //$("#account-score")
+    getaccounts();
+
+    //scores();
 });
 
 
@@ -210,11 +224,13 @@ function loginToAccount()
         response.map(account =>{
             if(account.Username === loginUser && account.Password === loginPwd)
             {
-                localStorage.setItem("login", JSON.stringify([account.Username,account.Password]));
+                localStorage.setItem("login", JSON.stringify([account.Username,account.Password,account.Score,account.Email,account.Password]));
                 accountFound = true;
-                console.log(response);
+                //console.log(response);
                 $("#errMsgLogin").text("Account created successfully!");
-                console.log(localStorage.getItem("login")); //Codes working check
+                //console.log(localStorage.getItem("login")); //Codes working check
+
+                window.location.assign("account_page.html");
             }
             else
             {
@@ -226,6 +242,7 @@ function loginToAccount()
         });
         
         //console.log(localStorage.getItem("login")); //Codes working check
+        console.log(login);
 
     });
 
@@ -241,7 +258,8 @@ function createAccount(){
     var jsondata = { 
         "Username": registerUser,
         "Email": registerEmail,
-        "Password": registerPwd
+        "Password": registerPwd,
+        "Score": 0
     }
 
     /*Post data to RestDB*/
@@ -260,10 +278,13 @@ function createAccount(){
     }
     
     $.ajax(settings).done(function (response) { 
-        //findAccount = false, 
-        $('#success-msg').html('Account created successfully!');
-        $('#success-msg').css('color','green');
-        console.log(response);
+        findAccount = false, 
+        window.location.assign("account_page.html");
+
+        if(findAccount = true){
+            existingAccounts();
+        }
+ 
     });
 
 }
@@ -285,22 +306,87 @@ function existingAccounts(){
     }
 
     $.ajax(settings).done(function (response) {
-        accountExist = true;
+        accountExist = false;
         response.map((account) => {
             if (registerUser === account.Username) {
-                $('#exist-error-name').html('Account Name Already Exists!');
+                $('#exist-error-name').html('Account Already Exists!');
                 $('#exist-error-name').css('color','red');
-                accountExist = false;
-            }
-
-            if(registerPwd === account.Password){
-                $('#exist-error-pwd').html('Password Already Exists!');
-                $('#exist-error-pwd').css('color','red');
-                accountExist = false;
+                accountExist = true;
             }
         });
         
     });
 
+}
+
+function getaccounts() {
+
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://idasg2-f43a.restdb.io/rest/account",
+        "method": "GET", 
+        "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache"
+        },
+    }
+
+    $.ajax(settings).done(function (response) {
+        let content = "";
+        let leadershipBoard = [];
+        for (var i = 0; i < response.length; i++) {
+            
+            leadershipBoard[i] = {
+                id: response[i]._id,
+                rank: response[i].rank,
+                name: response[i].Username,
+                score: response[i].Score
+            }
+        }
+
+        leadershipBoard.sort(function(a,b){return b.score - a.score})
+
+        console.log(leadershipBoard);
+
+        for(var l = 0;l <leadershipBoard.length && l < 15;l++)
+        {
+            content = `${content}
+            <tr id='${response[l]._id}'>
+            <td>${response[l].Rank}</td>
+            <td>${response[l].Username}</td>
+            <td>${response[l].Score}</td>
+            </tr>`
+        }
+
+        $("#leadership_Board tbody").html(content);
+        $("#leadership_Board").show();
+
+    });
+}
+
+function scores()
+{    
+    //import{score_crossword} from "./crossword";
+    //import{score_hangman} from "./hangman";
+    //import{score_wordsearch} from "./wordsearch.js";
+
+    if(login == null)
+    {
+        $("#notLoggedIn").show();
+        $("#playCrossword").btn("disabled",true);
+        $("#playHangman").btn("disabled",true)
+        $("#playWordSearch").btn("disabled",true)
+    }
+    else
+    {
+        $("#notLoggedIn").hide();
+        $("#playCrossword").btn("disabled",false);
+        $("#playHangman").btn("disabled",false)
+        $("#playWordSearch").btn("disabled",false)   
+    }
+
+    score = score_crossword + score_hangman + score_wordsearch 
 }
     
