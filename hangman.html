@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
-    <meta name="description" content="Contact">
+    <meta name="description" content="games">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     
-    <title>Games</title>
+    <title>Hangman</title>
     <link rel="icon" href="images/icon.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
     <link href="hangman.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
+
   <body>
     <nav class="navbar navbar-light">
       <div class="container-fluid">
@@ -40,6 +41,11 @@
       </div>
     </nav><br>
 
+    <p>Time remaining: </p>
+    <p id = "countdown"></p>
+    <p id = "game-over"></p>
+    <p><span id = "getscore">Score: </span></p>
+
  <div class="wrapper">
      <div id="buttons">
      </div>  
@@ -48,6 +54,7 @@
      </div>
      <p id="mylives"></p>
      <p id="clue">Clue: </p>  
+     <p id = "score">Score: </p>
       <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
      <div class="contain">
        <button id="hint">Hint</button>
