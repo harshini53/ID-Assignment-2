@@ -582,7 +582,7 @@ $( "#btnCheck" ).click(function() {
       console.log('incorrect');
       $(this).val('');
       score_crossword -= 10;  
-      console.log(score_crossword);
+      document.getElementById("score_crossword").innerHTML = score_crossword;
       } 
   });
 });

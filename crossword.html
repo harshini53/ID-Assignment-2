@@ -19,7 +19,8 @@
     
   </head>
 
-  <!--Navigation Bar-->
+  <body>
+    <!--Navigation Bar-->
     <nav class="navbar navbar-light">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -42,108 +43,111 @@
         </ul>
       </div>
     </nav>
-    </div>
-    </div>
-      
-    <!--Timer-->
-    <p>Time remaining: </p>
-    <div id = "countdown"></div>
 
-    <!--Crossword Digram-->
-    <div class="cwcontainer crosswordDisplay">
-      <!--Leave Spaces-->
-      <br><br><br><br><br>
+    
+  <h5 class="center">Score: </h5>
+  <h5 id="score_crossword" class="center"> 0 </h5><br><br><br>
+
+  <!--Crossword Digram-->
+  <div class="cwcontainer crosswordDisplay">
+
+    <!--Leave Spaces-->
+    <br><br><br><br><br>
+    
+    <div class="row">
       <div class="row">
-        <div class="row">
 
-          <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
-          <div class="btn btn-default disabled" id="btnCreate">Create</div>
-          <div class="btn btn-default disabled" id="btnPlay">Play</div>
-          <div class="btn btn-default" id="btnReset">Reset</div>
-          <div class="btn btn-default" id="btnCheck">Check Answers</div>
-        </div>
-        <div class="center crossword" id="crossword"></div>
-        <div class="btn" id="btnGen">Generate</div>
+        <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
+        <div class="btn btn-default disabled" id="btnCreate">Create</div>
+        <div class="btn btn-default disabled" id="btnPlay">Play</div>
+        <div class="btn btn-default" id="btnReset">Reset</div>
+        <div class="btn btn-default" id="btnCheck">Check Answers</div>
       </div>
+      <div class="center crossword" id="crossword"></div>
+      <div class="btn" id="btnGen">Generate</div>
+    </div>
 
-      <!--Questions-->
-      <div class="row">
-        <div class="center across">
-          <div class="clueBlock" id="cluesAcross">
-            <div class="clueDirection" id="directionAcross">ACROSS</div>
+    <!--Questions-->
+    <div class="row">
+      <div class="center across">
+        <div class="clueBlock" id="cluesAcross">
+          <div class="clueDirection" id="directionAcross">ACROSS</div>
 
-                <div class="line">
-                  <input class="word" type="text" value="len" />
-                  <span class="lineNum"></span>
-                  <input class="clue" value="An transparent structure of the eye which transmits light." />
-                </div>
+              <div class="line">
+                <input class="word" type="text" value="len" />
+                <span class="lineNum"></span>
+                <input class="clue" value="An transparent structure of the eye which transmits light." />
+              </div>
 
-                <div class="line">
-                  <input class="word" type="text" value="optic" />
-                  <span class="lineNum"></span>
-                  <input class="clue" value="The _______ nerve enter retina at a point called blind spot." />
-                </div>
+              <div class="line">
+                <input class="word" type="text" value="optic" />
+                <span class="lineNum"></span>
+                <input class="clue" value="The _______ nerve enter retina at a point called blind spot." />
+              </div>
 
-                <div class="line">
-                  <input class="word" type="text" value="iris" />
-                  <span class="lineNum"></span>
-                  <input class="clue" value="Uses muscles to change the size of the pupil" />
-                </div>
+              <div class="line">
+                <input class="word" type="text" value="iris" />
+                <span class="lineNum"></span>
+                <input class="clue" value="Uses muscles to change the size of the pupil" />
+              </div>
 
-                <div class="line">
-                  <input class="word" type="text" value="choroid"/>
-                  <span class="lineNum"></span>
-                  <input class="clue" value="Filled with blood vessels that bring oxygen and nutrients to the eye." />
-                </div>
+              <div class="line">
+                <input class="word" type="text" value="choroid"/>
+                <span class="lineNum"></span>
+                <input class="clue" value="Filled with blood vessels that bring oxygen and nutrients to the eye." />
+              </div>
 
-                <div class="line">
-                  <input class="word" type="text" value="cone"/>
-                  <span class="lineNum"></span>
-                  <input class="clue" value="Type of cell that is used as sensors for perception of colors." />
-                </div>
+              <div class="line">
+                <input class="word" type="text" value="cone"/>
+                <span class="lineNum"></span>
+                <input class="clue" value="Type of cell that is used as sensors for perception of colors." />
+              </div>
 
-                <div class="line">
-                  <input class="word" type="text" value="pupil"/>
-                  <span class="lineNum"></span>
-                  <input class="clue" value="The opening of the eye which allows light to enter." />
-                </div>
-            </div>
-          </div>
-
-          <div class="center down">
-            <div class="clueBlock" id="cluesDown">
-            <div class="clueDirection" id="directionDown">DOWN</div>
+              <div class="line">
+                <input class="word" type="text" value="pupil"/>
+                <span class="lineNum"></span>
+                <input class="clue" value="The opening of the eye which allows light to enter." />
+              </div>
           </div>
         </div>
-      </div>
 
-      <!--Footer-->
-      <div class ="footer" style="margin-top: 50;">
-        <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
-        <br>- All Rights Reserved.
-      </div> 
-
-      <div id="gamesModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title text-center"><strong>Game Instructions</strong></h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <h4 class="text-center"><strong>Please read the instructions before starting the game.</strong></h4>
-                    <h5 class="text-center"> 1. By using clues, figure out the word.</h5>
-                    <h5 class="text-center"> 2. Press check after you are <strong>DONE</strong> with the whole puzzle. </h5>
-                    <h5 class="text-center"> 3. You will be rewarded 10 points for every word, and deducted 10 points for every wrong word.</h5><br>
-                    <h5 class="text-center"> Easy? Good Luck!</h5>
-                    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kblbXu.json" background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
-                </div>
-            </div>
+        <div class="center down">
+          <div class="clueBlock" id="cluesDown">
+          <div class="clueDirection" id="directionDown">DOWN</div>
         </div>
-    </div>6
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class ="footer" style="margin-top: 50;">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div> 
+
+    <!--Pop up Modal: Game instrutions-->
+    <div id="gamesModal" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title text-center"><strong>Game Instructions</strong></h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <h4 class="text-center"><strong>Please read the instructions before starting the game.</strong></h4>
+                <h5 class="text-center"> 1. By using clues, figure out the word.</h5>
+                <h5 class="text-center"> 2. Press check after you are <strong>DONE</strong> with the whole puzzle. </h5>
+                <h5 class="text-center"> 3. You will be rewarded 10 points for every word, and deducted 10 points for every wrong word.</h5><br>
+                <h5 class="text-center"> Easy? Good Luck!</h5>
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kblbXu.json" background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
+              </div>
+          </div>
+      </div>
+    </div>
+
     <!--JavaScripts-->
     <script src="js/account.js"></script>
     <script src="js/crossword.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   </body>
 </html>

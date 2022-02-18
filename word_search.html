@@ -46,6 +46,9 @@
 
     <br>
   
+    <h5 class="center">Score: </h5>
+    <h5 id="score_wordsearch" class="center"> 0 </h5><br><br><br>
+
     <!--Word Search game-->
     <div class="puzzleWrap">
       <div id='puzzle'></div>
@@ -60,24 +63,25 @@
       <br>- All Rights Reserved.
     </div> 
 
+    <!--Pop up Modal: Game instrutions-->
     <div id="gamesModal" class="modal fade">
       <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h3 class="modal-title text-center"><strong>Game Instructions</strong></h3>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                  <h4 class="text-center"><strong>Please read the instructions before starting the game.</strong></h4>
-                  <h5 class="text-center"> 1. You will be given 5 words for the game.</h5>
-                  <h5 class="text-center"> 2. You will have to search the words in the table of words.</h5>
-                  <h5 class="text-center"> 3. You will be rewarded 10 points for every word.</h5><br>
-                  <h5 class="text-center"> Easy? Good Luck!</h5>
-                  <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kblbXu.json" background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
-              </div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-center"><strong>Game Instructions</strong></h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
+          <div class="modal-body">
+            <h4 class="text-center"><strong>Please read the instructions before starting the game.</strong></h4>
+            <h5 class="text-center"> 1. You will be given 5 words for the game.</h5>
+            <h5 class="text-center"> 2. You will have to search the words in the table of words.</h5>
+            <h5 class="text-center"> 3. You will be rewarded 10 points for every word.</h5><br>
+            <h5 class="text-center"> Easy? Good Luck!</h5>
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kblbXu.json" background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
     <!--JavaScripts-->
     <script src="js/account.js"></script>

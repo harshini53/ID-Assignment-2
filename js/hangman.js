@@ -203,7 +203,7 @@ window.onload = function () {
           comments();
         }
         console.log(score_hangman);
-        score_hangman.innerHTML = "Score: " + score_hangman
+        document.getElementById("score_hangman").innerHTML = score_hangman
       }
     }
     
