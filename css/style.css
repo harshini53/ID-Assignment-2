@@ -8,22 +8,6 @@
 	color: white;
 	text-align: center;
   }
-
-  .ctn .btn {
-	position: absolute;
-	top: 80%;
-	left: 75%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	background-color: #555;
-	color: white;
-	font-size: 16px;
-	padding: 12px 24px;
-	border: none;
-	cursor: pointer;
-	border-radius: 5px;
-  }
-
   .inner-ctn{
 	height: auto;
 	width: 80%;
@@ -154,55 +138,46 @@ b {
 	}
 }
 /*-------------------index.html----------------------------*/
-.search-container{
+.ctn .btn {
 	position: absolute;
-	top: 85%;
-	left: 68%;
-  }
-  .search-container [type=text] {
-	padding: 6px;
-	margin-top: 8px;
-	font-size: 17px;
-	border: none;
-  }
-  .search-container button {
-	float: right;
-	padding: 6px 10px;
-	margin-top: 8px;
-	margin-right: 16px;
-	background: #ddd;
-	font-size: 17px;
+	top: 80%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: #555;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
 	border: none;
 	cursor: pointer;
+	border-radius: 5px;
   }
-  .search-container button:hover {
-	background: #ccc;
+
+  .footer-ctn{
+	  background-color: whitesmoke;
   }
-  @media screen and (max-width: 600px) {
-	.search-container {
-		float: none;
-	  }
-	  .search-container[type=text], .search-container button {
-		float: none;
-		display: block;
-		text-align: left;
-		width: 100%;
-		margin: 0;
-		padding: 14px;
-	  }
-	  .search-container input[type=text] {
-		border: 1px solid #ccc;  
-	  }
-	}
+  .footer-ctn:btn{
+	position: absolute;
+	top: 90%;
+	left: 50%;
+  }
+  
 /*----------------contact_us.html-------------------*/
-.contactdetails{
-	background: linear-gradient(to right, #9C27B0, #E040FB);
+.contact-ctn{
+	width: 80%;
+	height: auto;
 }
 lottie{
 	justify-content: center;
 	align-items: center;
 
 }
+.col-sm-5{
+	height: 500px;
+	width: 500px;
+	background-color:linear-gradient(to right, #9C27B0, #E040FB);
+} 
+
   
 /*-------------discovery1/2.html--------------------*/
   .top-left {
