@@ -47,6 +47,7 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 
+/*
 //Timer
 var timeInSecs;
 var ticker;
@@ -75,4 +76,4 @@ document.getElementById("countdown").innerHTML = time;
 }
 
 startTimer(2*60); // 2 minutes in seconds
-
+*/

@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
-    <meta name="description" content="games">
+    <meta name="description" content="Contact">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     
-    <title>Hangman</title>
+    <title>Leaderboard</title>
     <link rel="icon" href="images/icon.png">
-    
-    <!--External Style Sheets-->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+    <!--External Style Sheets-->  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/hangman.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
   </head>
 
   <body>
@@ -45,51 +43,26 @@
       </div>
     </nav>
 
-    <br>
-
-    <!--Pop up Modal showing game instrutions-->
-    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
-          </div>
-          <div class="modal-body">
-            this content loaded by ajax
-          </div>
-        </div>
+    <div style = "text-align: left;"class="row sizecontact center"><br><br>
+      <!--Heading-->
+      <h2 style="text-align: center;">Leaderboard</h2>
+      <div class="container">
+        
+        <!--Created table to users scores-->
+        <table border="1" style="border-collapse:collapse" class="table" id="leadership_Board">
+          <thead>
+            <tr style="background-color: black;color: white;">
+              <th>Rank</th>
+              <th>Username</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
       </div>
     </div>
-      
-    <!--Timer-->
-    <p>Time remaining: </p>
-    <p id = "countdown"></p>
-    <p id = "game-over"></p>
-    <p><span id = "getscore">Score: </span></p>
 
-
-    <div class="wrapper">
-      <div id="buttons"></div>
-      
-        <!--Questions-->
-        <p id="catagoryName"></p>
-        <div id="hold"></div>
-
-        <!--Live counter + Clues-->
-        <p id="mylives"></p>
-        <p id="clue">Clue: </p>  
-        <p id = "score">Score: </p>
-        <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
-
-        <!--Buttons-->
-        <div class="contain">
-          <button id="hint">Hint</button>
-          <button id="reset">Play again</button>
-        </div>
-      </div>
-    </div>
-    
     <!--Footer-->
     <div class ="footer">
       <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
@@ -97,10 +70,8 @@
     </div> 
     
     <!--JavaScripts-->
+    <script src="js/script.js"></script>
     <script src="js/account.js"></script>
-    <script src ="js/script.js"></script>
-    <script src="js/hangman.js"></script>
 
   </body>
 </html>
-

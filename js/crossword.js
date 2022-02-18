@@ -1,3 +1,5 @@
+//export{score_crossword}
+
 $(document).ready(function(){
   $("#myBtn").click(function(){
     $("#myModal").modal();
@@ -600,4 +602,3 @@ $('#btnReset').click(function() {
   location.reload();
 });
 
-export{score_crossword}

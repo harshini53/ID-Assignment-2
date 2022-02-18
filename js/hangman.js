@@ -277,6 +277,6 @@ window.onload = function () {
   }
 
 
-export{score_hangman}
+//export{score_hangman}
   
   
