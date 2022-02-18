@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 //Links to different gamepages from game page
 function function_crossword(){
 window.open("crossword.html");
@@ -18,6 +19,8 @@ function er3btnFunction(){
   }
 
 //Discovery page 2
+=======
+>>>>>>> 90dd35a4d97f3e3bebfd9d8b0d78899c6d8d5505
 function changeImage() {
   var image = document.getElementById('myImage');
   if (image.src.match("images/dilationofeye2")) {
@@ -34,17 +37,4 @@ $(document).ready(function() {
   });
 });
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
 
