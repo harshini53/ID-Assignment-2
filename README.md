@@ -5,11 +5,24 @@ It is a platform that allows you to organize content, view it over and over agai
 ## Design Process
 Since we intend to create an educational page for Secondary Students, we decided to use more vibrant/attractive colour palette.
 For index.html:
- The main purpose of this page is to promote our features and beneifts of our website. Thus the main ideaa was to make the page look for appealing.
+ The main purpose of this page is to promote our features and beneifts of our website. Thus the main ideaa was to make the page look more appealing.
  
  For discovery pages:
   - The main idea was to create resources that would be useful/beneficial for students to undertsand better, thus we have created a hover over text for the diagrams.
   - As for the text, we deicded to divide the pages into sections.
+  - For discovery 1.1, we wanted an interactive touch to our resources, therefore we created a hover over text for users to read more about it.
+
+For games.html
+- We have included 3 games; crossword, hangman and wordsearch.
+- These games are created to help students remember, memorise and learn science contents in a fun, unique way.
+- The games are based on the topics on the discovery pages.
+
+Leaaderboard
+- To encourage students to try out our games, as they would want attain high scores to be listed in top 10  rankings of the leaderboard.
+
+Contact page
+- For users, who may have studies enquires, or website problems to contact us.
+- In our contact, we also included options such as feedbacks or commments, which users can consider in sending in, which will help us improve the site better.
 
 User stories
 - User-friendly sidebar menu that users can access to all pages of different topics 
@@ -29,7 +42,7 @@ User stories
 - Leaderboard - To showcase the rankings of the top players
 - Crossword Game - Allow users to guess the science term while figuring out the crossword
 - HangMen Game - Allows users to think and have tries to guess the word. Hints also provided
-- WordSearch Game - 
+- WordSearch Game - To help students memorise key terms as wordsearch is a game where you need full concentration to find the word,
 - Contact Form - for users who have special enquiries which they can contact us privately
 - Discovery pages - Pages where the topics are taught and their knowledge will be tested by playing the games
 - 
@@ -40,6 +53,8 @@ We plan to implement
 - More games to our website
 - Adding more resources, topics to our website.
 - Adding more functionally to our website 
+- Adding levels to our game
+- adding more challengers to our games
 
 ## Technologies Used
 Languages, frameworks, libraries, and any other tools that I have used in my project:
@@ -53,25 +68,15 @@ Languages, frameworks, libraries, and any other tools that I have used in my pro
 - [rest.db](https://restdb.io/)
      -The project uses **rest.db** to keep database for our user's details.
 - [html]
+      - HtML is used to describes the structure of our Web page.
 - [css]
+       - CSS  is used to add colors and styles to our page. It also help us to position somme of the features.
 - [javascripts]
-
+       - Javavscipt helps us to make our website more interctive. Javascript is heavily used in our creation of game
 
 ## Testing
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+Some of the problems that were faced by us, was the leaderboard, we had to format the Jquery into the table and sorting of the ranking. The problem we faced was that we had diffifulties implementing the aboved-mentioned.
 
 ## Credits
 ### Content
@@ -85,10 +90,12 @@ https://codepen.io/cathydutton/pen/JjpxMm
 https://codepen.io/Conor092/pen/OZPMKd
 
 ### Media
-- The photos used in index.html 
+- The photos used in index.html was taken from classsdojo.
+-The lottie was taken from https://lottiefiles.com/
 
 ### Acknowledgements
 - I had received inspiration for this project from ClassDojo (https://www.classdojo.com/), as well as Buncee (https://app.edu.buncee.com/).
+- Codings are referred from coddepen.io and w3schools.
 
 
 ### Link to pages
