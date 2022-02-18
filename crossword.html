@@ -9,19 +9,21 @@
     <title>Crossword</title>
     <link rel="icon" href="images/icon.png">
 
+    <!--External Style Sheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <link href="crosswordstyle.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="css/crosswordstyle.css" rel="stylesheet" type="text/css">
+    <link data-href="https://www.anitur.com.tr/popup/test-6-text"></limk>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     
   </head>
-  <body>
+
+  <!--Navigation Bar-->
     <nav class="navbar navbar-light">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">Scitastic</a>
+          <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
@@ -30,21 +32,78 @@
               <li><a href="discover_page2.html">Topic 1-2</a></li>
             </ul>
           </li>
-          <li><a href="#">Games</a></li>
-          <li><a href="leadership_board.html">Leaderboard</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leader_board.html">Leaderboard</a></li>
           <li><a href="contact_us.html">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
-      </ul>
+          <li><a href="login.html"><span class="glyphicon glyphicon-user" id="account_pic"></span></a>
+          <li><a href="account.html"><span id="navbar-username"></span></a></li>
+        </ul>
       </div>
     </nav>
-    
 
+    <!--Pop up Modal showing game instrutions-->
+    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
+          </div>
+          <div class="modal-body">
+            this content loaded by ajax
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--Pop up Modal showing game instrutions-->
+    <div class="modal fade gameOver" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
+          </div>
+          <div class="modal-body">
+            this content loaded by ajax
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="memberModalLabel">Popup Header</h4>
+          </div>
+          <div class="modal-body">
+            this content loaded by ajax
+          </div>
+          <div class="modal-footer">
+            <span class="will-close">will be closed after : <strong>n</strong> seconds</span>
+            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Timer-->
+    <p>Time remaining: </p>
+    <div id = "countdown"></div>
+
+    <!--Crossword Digram-->
     <div class="cwcontainer crosswordDisplay">
+      <!--Leave Spaces-->
       <br><br><br><br><br>
       <div class="row">
         <div class="row">
+
           <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
           <div class="btn btn-default disabled" id="btnCreate">Create</div>
           <div class="btn btn-default disabled" id="btnPlay">Play</div>
@@ -55,7 +114,7 @@
         <div class="btn" id="btnGen">Generate</div>
       </div>
 
-
+      <!--Questions-->
       <div class="row">
         <div class="center across">
           <div class="clueBlock" id="cluesAcross">
@@ -96,75 +155,26 @@
                   <span class="lineNum"></span>
                   <input class="clue" value="A messenger (4)" />
                 </div>
+            </div>
+          </div>
+
+          <div class="center down">
+            <div class="clueBlock" id="cluesDown">
+            <div class="clueDirection" id="directionDown">DOWN</div>
           </div>
         </div>
-
-        <div class="center down">
-          <div class="clueBlock" id="cluesDown">
-          <div class="clueDirection" id="directionDown">DOWN</div>
-        </div>
       </div>
-    </div>
-  </div>
 
-  <div class ="footer">
-    <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
-    <br>- All Rights Reserved.
-  </div> 
+      <!--Footer-->
+      <div class ="footer" style="margin-top: 50;">
+        <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+        <br>- All Rights Reserved.
+      </div> 
 
-  
-      <!-- Modal 
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-        <section class="forms-section">
-      <div class="forms">
-        <div class="form-wrapper is-active">
-          <button type="button" class="switcher switcher-login">
-            Login
-            <span class="underline"></span>
-          </button>
-          <form class="form form-login">
-            <fieldset>
-              <div class="input-block">
-                <label for="login-email">E-mail</label>
-                <input id="login-email" type="email" required>
-              </div>
-              <div class="input-block">
-                <label for="login-password">Password</label>
-                <input id="login-password" type="password" required>
-              </div>
-            </fieldset>
-            <button type="submit" class="btn-login">Login</button>
-          </form>
-        </div>
-        <div class="form-wrapper">
-          <button type="button" class="switcher switcher-signup">
-            Sign Up
-            <span class="underline"></span>
-          </button>
-          <form class="form form-signup">
-            <fieldset>
-              <div class="input-block">
-                <label for="signup-email">E-mail</label>
-                <input id="signup-email" type="email" required>
-              </div>
-              <div class="input-block">
-                <label for="signup-password">Password</label>
-                <input id="signup-password" type="password" required>
-              </div>
-              <div class="input-block">
-                <label for="signup-password-confirm">Confirm password</label>
-                <input id="signup-password-confirm" type="password" required>
-              </div>
-            </fieldset>
-            <button type="submit" class="btn-signup">Continue</button>
-          </form>
-        </div>
-      </div>
-    </section>-->
-
-    <script src="script.js"></script>
-    <script src="crossword.js"></script>
+      
+    <!--JavaScripts-->
+    <script src="js/account.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/crossword.js"></script>
   </body>
 </html>

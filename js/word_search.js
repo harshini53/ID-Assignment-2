@@ -782,6 +782,6 @@ $(function () {
 });
 
 
-export{score_wordsearch}
+//export{score_wordsearch}
 
 

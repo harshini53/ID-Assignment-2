@@ -9,18 +9,22 @@
     <title>Word Search</title>
     <link rel="icon" href="images/icon.png">
 
+    <!--External Style Sheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/word_search.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
-    <link href="wordsearch.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
+
   <body>
+    
+    <!--Navigation Bar-->
     <nav class="navbar navbar-light">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">Scitastic</a>
+          <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
@@ -29,32 +33,53 @@
               <li><a href="discover_page2.html">Topic 1-2</a></li>
             </ul>
           </li>
-          <li><a href="#">Games</a></li>
-          <li><a href="leadership_board.html">Leaderboard</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leader_board.html">Leaderboard</a></li>
           <li><a href="contact_us.html">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
-      </ul>
+          <li><a href="login.html"><span class="glyphicon glyphicon-user" id="account_pic"></span></a>
+          <li><a href="account.html"><span id="navbar-username"></span></a></li>
+        </ul>
       </div>
-    </nav><br>
+    </nav>
 
+    <br>
 
-  <div class="puzzleWrap">
-    <div id='puzzle'></div>
-    <div class="center" id='words'>
-      <button id='solve'>Solve Puzzle</button>
+    <!--Pop up Modal showing game instrutions-->
+    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
+          </div>
+          <div class="modal-body">
+            this content loaded by ajax
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  
+    <!--Word Search game-->
+    <div class="puzzleWrap">
+      <div id='puzzle'></div>
+      <div class="center" id='words'>
+        <button id='solve'>Solve Puzzle</button>
+      </div>
+    </div>
 
-  <!--Footer-->
-  <div class ="footer">
-    <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
-    <br>- All Rights Reserved.
-  </div> 
+    <!--Footer-->
+    <div class ="footer">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div> 
 
-    <script src ="script.js"></script>
-    <script src="wordsearch.js"></script>
-</body>
+    <!--JavaScripts-->
+    <script src="js/account.js"></script>
+    <script src ="js/script.js"></script>
+    <script src="js/word_search.js"></script>
+
+  </body>
 </html>
 
