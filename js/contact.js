@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const APIKEY = "601a5d306adfba69db8b6cfc";
+    const APIKEY = "62073a121b941c73ff397ab1";
     // Send contact form data on subimt
     $("#contact-form").submit(function(e) {
         $('.contact-loading').show(); // Show lottie loading icon
@@ -16,7 +16,7 @@ $(document).ready(function () {
         $.ajax({
             "async": true,
             "crossDomain": true, 
-            "url": "https://sneakerzone-11b9.restdb.io/rest/contact-info",
+            "url": "https://idasg2-f43a.restdb.io/rest/account",
             "method": "POST",
             "headers": {
                 "content-type": "application/json",

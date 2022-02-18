@@ -182,7 +182,7 @@ function getaccounts() {
 
         console.log(leadershipBoard);
 
-        for(var l = 0;l <leadershipBoard.length && l < 15;l++)
+        for(var l = 0;l <leadershipBoard.length && l < 10;l++)
         {
             content = `${content}
             <tr id='${response[l]._id}'>
@@ -194,6 +194,8 @@ function getaccounts() {
 
         $("#leadership_Board tbody").html(content);
         $("#leadership_Board").show();
+
+        console.log(l);
 
     });
 }
