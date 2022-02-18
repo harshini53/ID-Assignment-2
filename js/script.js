@@ -1,22 +1,4 @@
 
-
-function function_crossword(){
-window.open("crossword.html");
-}
-
-function function_hangman(){
-window.open("hangman.html");
-}
-function er1btnFunction(){
-  window.open("https://www.science.edu.sg/for-schools/resources");
-  }
-function er2btnFunction(){
-  window.open("https://www.science.edu.sg/for-schools/resources");
-  }
-function er3btnFunction(){
-  window.open("https://www.teachstarter.com/au/learning-area/science/");
-  }
-
 function changeImage() {
   var image = document.getElementById('myImage');
   if (image.src.match("images/dilationofeye2")) {
@@ -33,19 +15,6 @@ $(document).ready(function() {
   });
 });
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
 
 $(function() {
   var popup = $('#mainpopup');
