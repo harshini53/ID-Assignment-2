@@ -275,7 +275,15 @@ window.onload = function () {
       play();
     }
   }
-
+  $(document).ready(function(){
+    $("#myBtn").click(function(){
+      $("#myModal").modal();
+    });
+  });
+  
+  $(document).ready(function(){
+    $("#gamesModal").modal('show');
+  });
 
 //export{score_hangman}
   
