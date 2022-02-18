@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
+    <meta name="description" content="Contact">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    
+    <title>Contact Us</title>
+    <link rel="icon" href="images/icon.png">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
-  <meta name="description" content="Contact">
-  <meta name="viewport" content="width=device-width, inital-scale=1.0">
-  
-  <title>Contact Us</title>
-  <link rel="icon" href="images/icon.png">
+    <!--External Style Sheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-
-
-<body>
+  <body>
+    <!--Navigation Bar-->
     <nav class="navbar navbar-light">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><em>Sci</em>stastic</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="discover_page1.html">Topic 1-1</a></li>
-                <li><a href="discover_page2.html">Topic 1-2</a></li>
-              </ul>
-            </li>
-            <li><a href="games.html">Games</a></li>
-            <li><a href="leadership_board.html">Leaderboard</a></li>
-            <li><a href="contact_us.html">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
-        </ul>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
         </div>
-      </nav>
-      <form>
-      <div class="contact-ctn text-center">
-        <h2 class="text-center">CONTACT</h2>
-        <div class="row">
-          <div class="col-sm-5 text-center">
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="discover_page1.html">Topic 1-1</a></li>
+              <li><a href="discover_page2.html">Topic 1-2</a></li>
+            </ul>
+          </li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leader_board.html">Leaderboard</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-user" id="account_pic"></span></a>
+          <li><a href="account.html"><span id="navbar-username"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Contact us form-->
+    <form>
+
+      <!--Heading-->
+      <h2 class="text-center">CONTACT US</h2>
+      <div class="row">
+        <div class="card3 row center"> 
+          
+          <!--Information about us-->
+          <div class="side3 "><br><br>
             <p>Contact us and we'll get back to you within 24 hours.</p>
             <p><span class="glyphicon glyphicon-map-marker text-white"></span> 535 Clementi Rd, Singapore 599489</p>
             <p><span class="glyphicon glyphicon-phone"></span>  +65 6466 6555</p>
             <p><span class="glyphicon glyphicon-envelope"></span> hello@scistastic.com</p>
-            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_86eeqlid.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_86eeqlid.json"  background="transparent"  speed="1"  style="width: 290px; height: 290px;" class="center" loop  autoplay></lottie-player>
           </div>
-          <div class="col-sm-7">
+        
+          <!--User Inputs-->
+          <div class="side4">
             <div class="row">
               <div class="col-sm-6 form-group">
                 <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
               </div>
+
               <div class="col-sm-6 form-group">
                 <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
               </div>
             </div>
+          
             <label style=" display:inline-block; font-weight: bold ; width: 300px ;" for="problems">Select a topic: </label>
             <select class="form-control form-control-sm">
               <option>Feedbacks</option>
               <option>Lagging</option>
               <option>Reset Password</option>
               <option>Others</option>
-         </select><br>
+            </select><br>
+
             <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
             <textarea class="form-control" id="feedbacks" name="feedbacks" placeholder="Feedbacks" rows="5"></textarea><br>
             <div class="row">
               <div class="col-sm-12 form-group">
-                <button class="btn btn-default pull-right" type="submit">Send</button>
-              </div>
+              <button class="btn btn-default pull-right" type="submit">Send</button>
             </div>
+          </div>
           </div>
         </div>
       </div>
-    </div>
-      </form>
+    </form>
 
-  <div class ="footer">
-    <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
-    <br>- All Rights Reserved.
-  </div>  
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="script.js"></script>
-  <script src="contact.js"></script>
-</body>
+
+    <br><br><br><br>
+    <!--Footer-->
+    <div class ="footer">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div>  
+
+    <!--JavaScripts-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
 </html>
