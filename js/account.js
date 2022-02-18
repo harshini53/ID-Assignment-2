@@ -56,15 +56,12 @@ function loginToAccount()
             if(account.Username === loginUser && account.Password === loginPwd)
             {
                 localStorage.setItem("login", JSON.stringify([account.Username,account.Score,account.Email]));
-                console.log(response);
-                console.log(localStorage.getItem("login")); //Codes working check
-                $("#errMsgLogin").html("Account does not exist!");
                 window.location.assign('index.html');
                 accountFound = true;
             }
             
             $("#errMsgLogin").html("Account does not exist!");
-            $('#errMsgLogin').css('color','red');
+            $("#errMsgLogin").css("color","red");
             accountFound = false;
         
 
@@ -110,7 +107,6 @@ function createAccount(){
         accountFound = false;
         window.location.assign("login.html");
         $("#loginAgain").text("Please log in")
-
         if(accountFound = true)
         {
             existingAccounts();
@@ -176,15 +172,14 @@ function getaccounts() {
             }
         }
 
-        leadershipBoard.sort(function(a,b){return b.score - a.score})
-
+        leadershipBoard.sort(function(a,b){return b.score-a.score});
         console.log(leadershipBoard);
 
         for(var l = 0;l <leadershipBoard.length && l < 10;l++)
         {
             content = `${content}
             <tr id='${response[l]._id}'>
-            <td>${response[l].Rank}</td>
+            <td>${l+ 1}</td>
             <td>${response[l].Username}</td>
             <td>${response[l].Score}</td>
             </tr>`
@@ -192,9 +187,7 @@ function getaccounts() {
 
         $("#leadership_Board tbody").html(content);
         $("#leadership_Board").show();
-
-        console.log(l);
-
+        $("#load").hide();
     });
 }
 

@@ -636,6 +636,7 @@
           wordList.splice(i,1);
           $('.' + curWord).addClass('wordFound');
           score_wordsearch = (50 - (wordList.length)*10);
+          document.getElementById("score_wordsearch").innerHTML = score_wordsearch;
         }
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');

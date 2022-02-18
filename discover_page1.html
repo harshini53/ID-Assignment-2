@@ -2,72 +2,92 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Scistatics</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
+    <meta name="description" content="education">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    
+    <title>Discovery</title>
     <link rel="icon" href="images/icon.png">
+
+    <!--External Style Sheets-->
     <link href='https://fonts.googleapis.com/css?family=Hahmlet' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Jomolhari' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-light">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"><em>Sci</em>stastic</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Topic 1-1</a></li>
-          <li><a href="discover_page2.html">Topic 1-2</a></li>
-        </ul>
-      </li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="leadership_board.html">Leaderboard</a></li>
-      <li><a href="contact_us.html">Contact</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
-  </ul>
-  </div>
-</nav>
-<div class="ctn">
-  <img src="images/discover-bg.jpg" class="img-fluid" alt="Responsive image" style="width: 100%;">
-  <div class ="top-left">DISCOVERY 1.1</div>
-  <div class = "underline">_________________</div>
-  <div class="centered">The Eye</div>
-</div>
-<div class="box text-center">
-  <br><h4><strong>Learning Objective :</strong></h4>
-  <span class="glyphicon glyphicon-ok" style="font-size: 20px;"> Identify parts of an Eye</span><br>
-  <span class="glyphicon glyphicon-ok" style="font-size: 20px;"> Understand the functions of different parts of the eye</span>
-</div>
-<div class="front-view-ctn text-center">
-  <h3 class="text-center"><strong>Front View of the Eye</strong></h3>
-  <img src="images/frontviewofeye.jpg" class="img-fluid" alt="Responsive image" style= "width:60%">
-  <h6 class ="pupil-object" data-toggle="popover" title="Pupil" data-content="The opening of the eye which allows light to enter, it is surrounded by the iris, which is the coloured part of the eye. The pupil can control how much light can enter the eye by changing its size, for example dilation (bigger) and constriction (smaller)">Pupil</h6>
-  <h6 class ="iris-object"data-toggle="popover" title="Iris" 
-  data-content="It is an transparent structure of the eye which transmits light so that the light can focus on the retina. The lens changes its shape, which results in the change of the focal distance of the eye. 
-  This allows the the eye to see clear images of objects positioned at different distances. For example, near and far distance">Iris</h6>
-</div>
-<div class="hori-view-ctn text-center">
-  <h3 class="text-center"><strong>Horizontal Section of the Eye</strong></h3>
-  <img src="images/horizontalsectionofeye.png" class="img-fluid" alt="Responsive image" style= "width:80%">
-  <h6 class ="cornea-object" data-toggle="popover" title="Cornea" 
-  data-content="The cornea acts as the eye's outermost lens. It functions like a window that controls and focuses the entry of light into the eye." 
-  style ="font-family: 'Hahmlet'">Cornea</h6>
-  <h6 class ="optic-object" data-toggle="popover" title="Optic Nerve" 
-  data-content="The optic nerve produces all sorts of visual information. It transmits sensory information for vision in the form of electrical impulses from the eye to the brain. " 
-  style = "font-family: 'Jomolhari'">Optic  nerve</h6>
-</div>
-<div class ="footer">
-  <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
-  <br>- All Rights Reserved.
-</div>
-    <script src="script.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="discover_page1.html">Topic 1-1</a></li>
+              <li><a href="discover_page2.html">Topic 1-2</a></li>
+            </ul>
+          </li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leader_board.html">Leaderboard</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-user" id="account_pic"></span></a>
+          <li><a href="account.html"><span id="navbar-username"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Heading-->
+    <div class="ctn">
+      <img src="images/discover-bg.jpg" class="img-fluid" alt="Responsive image" style="width: 100%;">
+      <div class ="top-left">DISCOVERY 1.1</div>
+      <div class = "underline">_________________</div>
+      <div class="centered">The Eye</div>
+    </div>
+
+    <!--Objectives-->
+    <div class="box text-center">
+      <br><h4><strong>Learning Objective :</strong></h4>
+        <span class="glyphicon glyphicon-ok" style="font-size: 20px;"> Identify parts of an Eye</span><br>
+        <span class="glyphicon glyphicon-ok" style="font-size: 20px;"> Understand the functions of different parts of the eye</span>
+    </div>
+
+    <!--Content-->
+    <div class="front-view-ctn text-center">
+      <h3 class="text-center"><strong>Front View of the Eye</strong></h3>
+        <img src="images/frontviewofeye.jpg" class="img-fluid" alt="Responsive image" style= "width:60%">
+      <h6 class ="pupil-object" data-toggle="popover" title="Pupil" data-content="The opening of the eye which allows light to enter, it is surrounded by the iris, which is the coloured part of the eye. The pupil can control how much light can enter the eye by changing its size, for example dilation (bigger) and constriction (smaller)">Pupil</h6>
+      <h6 class ="iris-object"data-toggle="popover" title="Iris" 
+        data-content="It is an transparent structure of the eye which transmits light so that the light can focus on the retina. The lens changes its shape, which results in the change of the focal distance of the eye. 
+      This allows the the eye to see clear images of objects positioned at different distances. For example, near and far distance">Iris</h6>
+    </div>
+
+    <div class="hori-view-ctn text-center">
+      <h3 class="text-center"><strong>Horizontal Section of the Eye</strong></h3>
+        <img src="images/horizontalsectionofeye.png" class="img-fluid" alt="Responsive image" style= "width:80%">
+      <h6 class ="cornea-object" data-toggle="popover" title="Cornea" 
+        data-content="The cornea acts as the eye's outermost lens. It functions like a window that controls and focuses the entry of light into the eye." 
+        style ="font-family: 'Hahmlet'">Cornea</h6>
+      <h6 class ="optic-object" data-toggle="popover" title="Optic Nerve" 
+        data-content="The optic nerve produces all sorts of visual information. It transmits sensory information for vision in the form of electrical impulses from the eye to the brain. " 
+        style = "font-family: 'Jomolhari'">Optic  nerve</h6>
+    </div>
+
+    <!--Footer-->
+    <div class ="footer">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div>
+
+    <!--JavaScripts-->
+    <script src="js/script.js"></script>
+    <script src="js/account.js"></script>
+  </body>
 </html>
