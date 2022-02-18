@@ -16,11 +16,15 @@ $(document).ready(function() {
         location.href="index.html"
     });
 
-    $('#account-username').html(login[1]); // Set it to account name
-    console.log(login)
-    $('#account-email').html(login[3]);
-    $('#account-password').html(login[4]);
-    $('#account-score').html(login[2]);
+    if (login != null)
+    {
+        $('#navbar-username').html(login[0])
+        $('#account-username').html(login[0]); // Set it to account name
+        console.log(login)
+        $('#account-email').html(login[3]);
+        $('#account-password').html(login[1]);
+        $('#account-score').html(login[2]);
+    }
 
     //$("#account-score")
     getaccounts();
@@ -53,18 +57,19 @@ function loginToAccount()
         response.map(account =>{
             if(account.Username === loginUser && account.Password === loginPwd)
             {
-                localStorage.setItem("login", JSON.stringify([account.Username,account.Password,account.Score,account.Email,account.Password]));
-                accountFound = true;
+                localStorage.setItem("login", JSON.stringify([account.Username,account.Password,account.Score,account.Email]));
                 console.log(response);
                 console.log(localStorage.getItem("login")); //Codes working check
+                $("#errMsgLogin").html("Account does not exist!");
                 window.location.assign('index.html');
-                $("#account_pic").hide();
+                accountFound = true;
             }
-            else
-            {
-                $("#errMsgLogin").text("Account does not exist!");
-                $('#errMsgLogin').css('color','red');
-            }
+            
+            $("#errMsgLogin").html("Account does not exist!");
+            $('#errMsgLogin').css('color','red');
+            accountFound = false;
+        
+
         });
         
         //console.log(localStorage.getItem("login")); //Codes working check
@@ -104,13 +109,14 @@ function createAccount(){
     }
     
     $.ajax(settings).done(function (response) { 
-        findAccount = false, 
-        window.location.assign("account_page.html");
+        accountFound = false;
+        window.location.assign("login.html");
+        $("#loginAgain").text("Please log in")
 
-        if(findAccount = true){
+        if(accountFound = true)
+        {
             existingAccounts();
         }
- 
     });
 
 }
@@ -132,12 +138,12 @@ function existingAccounts(){
     }
 
     $.ajax(settings).done(function (response) {
-        accountExist = false;
+        accountFound = true
         response.map((account) => {
             if (registerUser === account.Username) {
                 $('#exist-account-msg').html('Account Already Exists!');
                 $('#exist-account-msg').css('color','red');
-                accountExist = true;
+                accountFound = false;
             }
         });
         
