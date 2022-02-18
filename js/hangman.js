@@ -20,7 +20,7 @@ window.onload = function () {
     var showCatagory = document.getElementById("scatagory");
     var getHint = document.getElementById("hint");
     var showClue = document.getElementById("clue");
-    var score_hangman = document.getElementById("score");
+    var score_hangman = document.getElementById("score"); 
   
   
   
@@ -191,7 +191,7 @@ window.onload = function () {
           if (word[i] === geuss) {
             geusses[i].innerHTML = geuss;
             counter += 1;
-            score_hangman = counter * 10
+            score_hangman = counter * 10  //Calculate score
           }
         }
         var j = (word.indexOf(geuss));

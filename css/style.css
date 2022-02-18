@@ -242,7 +242,7 @@ lottie{
 }
 
 
-/* Aligning elelments at the center */
+/* Aligning elements at the center */
 .center{
 	display: block;
 	margin-left: auto;
@@ -299,7 +299,7 @@ lottie{
 	padding: 10px;
   }
 
-   /*Styling Side2 Column*/
+   /*Styling Side3 Column*/
    .side3 {
 	text-align: center;
 	flex: 30%;
@@ -308,7 +308,7 @@ lottie{
 	margin-top: 10px;
   }
 
-   /*Styling Side2 Column*/
+   /*Styling Side4 Column*/
    .side4 {
 	width: 630px;
 	padding: 10px;
@@ -376,7 +376,7 @@ lottie{
 	padding: 14px 16px;
   }
 
-  /*Game buttons*/
+  /*Game page buttons*/
 
   .button {
 	background-color: #E1BEE7; 

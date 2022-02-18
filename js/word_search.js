@@ -627,7 +627,7 @@
     *
     */
     var endTurn = function () {
-    var score_wordsearch = 0;
+    var score_wordsearch = 0; //Calclate Score
       // see if we formed a valid word
       for (var i = 0, len = wordList.length; i < len; i++) {
         

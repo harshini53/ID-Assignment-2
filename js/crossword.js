@@ -581,7 +581,7 @@ $( "#btnCheck" ).click(function() {
     if (!($(this).attr('data-letter') === ($(this).val().toUpperCase()))) {
       console.log('incorrect');
       $(this).val('');
-      score_crossword -= 10;  
+      score_crossword -= 10;  //Calculate score
       document.getElementById("score_crossword").innerHTML = score_crossword;
       } 
   });
