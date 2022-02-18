@@ -42,57 +42,9 @@
         </ul>
       </div>
     </nav>
-
-    <!--Pop up Modal showing game instrutions-->
-    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
-          </div>
-          <div class="modal-body">
-            this content loaded by ajax
-          </div>
-        </div>
-      </div>
     </div>
-  
-    <!--Pop up Modal showing game instrutions-->
-    <div class="modal fade gameOver" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
-          </div>
-          <div class="modal-body">
-            this content loaded by ajax
-          </div>
-        </div>
-      </div>
     </div>
-  
-    
-    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="memberModalLabel">Popup Header</h4>
-          </div>
-          <div class="modal-body">
-            this content loaded by ajax
-          </div>
-          <div class="modal-footer">
-            <span class="will-close">will be closed after : <strong>n</strong> seconds</span>
-            
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+      
     <!--Timer-->
     <p>Time remaining: </p>
     <div id = "countdown"></div>
@@ -121,39 +73,39 @@
             <div class="clueDirection" id="directionAcross">ACROSS</div>
 
                 <div class="line">
-                  <input class="word" type="text" value="Isa" />
+                  <input class="word" type="text" value="len" />
                   <span class="lineNum"></span>
-                  <input class="clue" value="The bringer of the Gospel (3)" />
+                  <input class="clue" value="An transparent structure of the eye which transmits light." />
                 </div>
 
                 <div class="line">
-                  <input class="word" type="text" value="Dawud" />
+                  <input class="word" type="text" value="optic" />
                   <span class="lineNum"></span>
-                  <input class="clue" value="The bringer of the Psalms (5)" />
+                  <input class="clue" value="The _______ nerve enter retina at a point called blind spot." />
                 </div>
 
                 <div class="line">
-                  <input class="word" type="text" value="Musa" />
+                  <input class="word" type="text" value="iris" />
                   <span class="lineNum"></span>
-                  <input class="clue" value="The bringer of the Torah (4)" />
+                  <input class="clue" value="Uses muscles to change the size of the pupil" />
                 </div>
 
                 <div class="line">
-                  <input class="word" type="text" value="Ibrahim"/>
+                  <input class="word" type="text" value="choroid"/>
                   <span class="lineNum"></span>
-                  <input class="clue" value="The bringer of the scrolls (7)" />
+                  <input class="clue" value="Filled with blood vessels that bring oxygen and nutrients to the eye." />
                 </div>
 
                 <div class="line">
-                  <input class="word" type="text" value="Nabi"/>
+                  <input class="word" type="text" value="cone"/>
                   <span class="lineNum"></span>
-                  <input class="clue" value="A prophet (4)" />
+                  <input class="clue" value="Type of cell that is used as sensors for perception of colors." />
                 </div>
 
                 <div class="line">
-                  <input class="word" type="text" value="Rasul"/>
+                  <input class="word" type="text" value="pupil"/>
                   <span class="lineNum"></span>
-                  <input class="clue" value="A messenger (4)" />
+                  <input class="clue" value="The opening of the eye which allows light to enter." />
                 </div>
             </div>
           </div>
@@ -171,10 +123,27 @@
         <br>- All Rights Reserved.
       </div> 
 
-      
+      <div id="gamesModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center"><strong>Game Instructions</strong></h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center"><strong>Please read the instructions before starting the game.</strong></h4>
+                    <h5 class="text-center"> 1. By using clues, figure out the word.</h5>
+                    <h5 class="text-center"> 2. Press check after you are <strong>DONE</strong> with the whole puzzle. </h5>
+                    <h5 class="text-center"> 3. You will be rewarded 10 points for every word, and deducted 10 points for every wrong word.</h5><br>
+                    <h5 class="text-center"> Easy? Good Luck!</h5>
+                    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kblbXu.json" background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+    </div>6
     <!--JavaScripts-->
     <script src="js/account.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/crossword.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>

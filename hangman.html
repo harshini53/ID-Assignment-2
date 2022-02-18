@@ -46,21 +46,6 @@
     </nav>
 
     <br>
-
-    <!--Pop up Modal showing game instrutions-->
-    <div class="modal fade" id="mainpopup" tabindex="-1" role="dialog" aria-labelledby="mainpopupLabel" aria-hidden="true"  data-close="10" data-open="2">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="memberModalLabel">Rules</h4>
-          </div>
-          <div class="modal-body">
-            this content loaded by ajax
-          </div>
-        </div>
-      </div>
-    </div>
       
     <!--Timer-->
     <p>Time remaining: </p>
@@ -95,11 +80,32 @@
       <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
       <br>- All Rights Reserved.
     </div> 
+
+    <!--Pop up Modal showing game instrutions-->
+    <div id="gamesModal" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h3 class="modal-title text-center"><strong>Game Instructions</strong></h3>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                  <h4 class="text-center"><strong>Please read the instructions before starting the game.</strong></h4>
+                  <h5 class="text-center"> 1. You will be given a question where you have to guess the word.</h5>
+                  <h5 class="text-center"> 2. If you are unsure, click on the hint for some help! </h5>
+                  <h5 class="text-center"> 3. You will be rewarded 10 points for every word.</h5><br>
+                  <h5 class="text-center"> Easy? Good Luck!</h5>
+                  <h5 class="text-center text-danger"> Warning: You only have 10 lives!</h5>
+                  <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_kblbXu.json" background="transparent"  speed="1"  style="width: 100px; height: 100px; margin: 0 auto;"  loop  autoplay></lottie-player>
+              </div>
+          </div>
+      </div>
+  </div>
     
     <!--JavaScripts-->
     <script src="js/account.js"></script>
-    <script src ="js/script.js"></script>
     <script src="js/hangman.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   </body>
 </html>

@@ -144,7 +144,7 @@ b {
 	left: 75%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	background-color: #555;
+	background-color: linear-gradient(to right, #9C27B0, #E040FB);
 	color: white;
 	font-size: 16px;
 	padding: 12px 24px;

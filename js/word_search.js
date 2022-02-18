@@ -1,3 +1,4 @@
+
 (function () {
 
   'use strict';
@@ -759,7 +760,7 @@
 }(document, jQuery, wordfind));
 
 $(function () {
-  var words = ['save', 'earn', 'invest', 'retirement', 'account'];
+  var words = ['sclera', 'opticnerve', 'cornea', 'iris', 'conjuctiva'];
   // start a word find game
   var gamePuzzle = wordfindgame.create(
     words, 
@@ -781,6 +782,15 @@ $(function () {
   
 });
 
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+
+$(document).ready(function(){
+  $("#gamesModal").modal('show');
+});
 
 //export{score_wordsearch}
 

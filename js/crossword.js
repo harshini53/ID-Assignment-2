@@ -1,15 +1,6 @@
+
+
 //export{score_crossword}
-
-$(document).ready(function(){
-  $("#myBtn").click(function(){
-    $("#myModal").modal();
-  });
-});
-
-$(document).ready(function(){
-  $("#gamesModal").modal('show');
-});
-
 
 //---------------------------------//
 //   GLOBAL VARIABLES              //
@@ -602,3 +593,12 @@ $('#btnReset').click(function() {
   location.reload();
 });
 
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+
+$(document).ready(function(){
+  $("#gamesModal").modal('show');
+});
