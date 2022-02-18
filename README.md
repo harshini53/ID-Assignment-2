@@ -22,37 +22,39 @@ User stories
 - A leaderboard will also be featured to showcase the top players of the game
 - There would be an accounts page where it would it would display user’s profile and game histories
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
 
 ## Features 
 ### Existing Features
 - Log in and sign up page - To keep informations of the user's
 - Leaderboard - To showcase the rankings of the top players
 - Crossword Game - Allow users to guess the science term while figuring out the crossword
-- HangMen Game 
+- HangMen Game - Allows users to think and have tries to guess the word. Hints also provided
 - WordSearch Game - 
 - Contact Form - for users who have special enquiries which they can contact us privately
+- Discovery pages - Pages where the topics are taught and their knowledge will be tested by playing the games
 - 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future
+
 ### Features Left to Implement
 We plan to implement
 - More games to our website
 - Adding more resources, topics to our website.
-- Adding more functionally to our website - add
+- Adding more functionally to our website 
 
 ## Technologies Used
 Languages, frameworks, libraries, and any other tools that I have used in my project:
 
--[Bootstrap](https://bootstrap.com)
+- [Bootstrap](https://bootstrap.com)
     - The project used **Bootstrap** on our navigation bars, containers to make it mobile-responsive,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
--[Lottie](https://lottiefiles.com/)
+- [Lottie](https://lottiefiles.com/)
     - The project uses **lottie** to add animations designs to our work.
--[rest.db](https://restdb.io/)
+- [rest.db](https://restdb.io/)
      -The project uses **rest.db** to keep database for our user's details.
+- [html]
+- [css]
+- [javascripts]
 
 
 ## Testing
@@ -73,9 +75,9 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Credits
 ### Content
--Login/SignUp Page:
+- Login/SignUp Page:
 https://codepen.io/Devel0per95/pen/rjOpdx
--Crossword Game
+- Crossword Game
 https://codepen.io/yagga47/pen/JgmYYx
 - Hangman Game:
 https://codepen.io/cathydutton/pen/JjpxMm
@@ -87,3 +89,10 @@ https://codepen.io/Conor092/pen/OZPMKd
 
 ### Acknowledgements
 - I had received inspiration for this project from ClassDojo (https://www.classdojo.com/), as well as Buncee (https://app.edu.buncee.com/).
+
+
+### Link to pages
+- Video: https://drive.google.com/drive/u/1/folders/1XNOvCWxx179GAv7NkJ9UFNxqMRSxD4HB
+- Github: https://harshini53.github.io/ID-Assignment-2/
+- Respitory: github.com:harshini53/ID-Assignment-2.git
+
