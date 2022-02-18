@@ -243,13 +243,6 @@ lottie{
 }
 
 
-
-
-
-
-
-
-
 /* Aligning elelments at the center */
 .center{
 	display: block;
@@ -258,13 +251,6 @@ lottie{
 	text-align: center;
   }
 
-  /* Styling the form*/
-.form {
-	width: 50%;
-	padding: 30px;
-	margin: auto;
-	background-color: grey;
-  }
 
 /*Leaderboard*/
 .container {
@@ -314,12 +300,29 @@ lottie{
 	padding: 10px;
   }
 
+   /*Styling Side2 Column*/
+   .side3 {
+	text-align: center;
+	flex: 30%;
+	padding: 20px;
+	background-color: #cda6e2;
+	margin-top: 10px;
+  }
+
+   /*Styling Side2 Column*/
+   .side4 {
+	width: 630px;
+	padding: 10px;
+	margin-top: 10px;
+
+  }
+
 /*Styling Tables*/
 .table {
 	width: 90%;
 	height: 40%;
 	margin: auto;
-	text-align: center;
+	text-align: left;
 }
 
 /*Account*/
@@ -342,6 +345,24 @@ lottie{
 	width: 50%;
 	height: 30%;
 	border-radius: 14px;
+  }
+
+  .card3 {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 70%;
+	height: 30%;
+	border-radius: 14px;
+	padding: 20px;
+  }
+
+  .card5{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 50%;
+	height: 30%;
+	border-radius: 14px;
+	padding: 20px;
   }
   
   .card:hover {
@@ -372,5 +393,3 @@ lottie{
 	color: white;
   }
  
-  
-/*Modal*/

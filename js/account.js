@@ -20,9 +20,7 @@ $(document).ready(function() {
     {
         $('#navbar-username').html(login[0])
         $('#account-username').html(login[0]); // Set it to account name
-        console.log(login)
         $('#account-email').html(login[3]);
-        $('#account-password').html(login[1]);
         $('#account-score').html(login[2]);
     }
 
@@ -57,7 +55,7 @@ function loginToAccount()
         response.map(account =>{
             if(account.Username === loginUser && account.Password === loginPwd)
             {
-                localStorage.setItem("login", JSON.stringify([account.Username,account.Password,account.Score,account.Email]));
+                localStorage.setItem("login", JSON.stringify([account.Username,account.Score,account.Email]));
                 console.log(response);
                 console.log(localStorage.getItem("login")); //Codes working check
                 $("#errMsgLogin").html("Account does not exist!");
