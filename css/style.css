@@ -294,7 +294,7 @@ lottie{
 /*Leaderboard*/
 .container {
 	width: 700px; 
-	height: 300px;
+	height: 475px;
 	background-color:whitesmoke ;
 	padding: 20px;
 }
@@ -329,15 +329,12 @@ lottie{
   .side1 {
 	flex: 30%;
 	display: inline-block;
-	background-color: gray;
-	padding: 15px;
 	text-align: center;
   }
   
   /*Styling Side2 Column*/
   .side2 {
 	flex: 50%;
-	background-color:lightgray;
 	font-size: large;
 	padding: 10px;
   }
@@ -361,7 +358,15 @@ lottie{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
 	width: 30%;
-	border-radius: 5px;
+	border-radius: 14px;
+  }
+
+  .card2 {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 50%;
+	height: 30%;
+	border-radius: 14px;
   }
   
   .card:hover {
