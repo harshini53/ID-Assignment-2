@@ -2,101 +2,129 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Elluru Sree Harshini and Lee Jia Ying Jess">
+    <meta name="description" content="Contact">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
     
     <title>Scitastic</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/icon.png">
+
+    <!--External Style Sheets-->
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
   </head>
-  <body>
-    <nav class="navbar navbar-light">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="discover_page1.html">Topic 1-1</a></li>
-          <li><a href="discover_page2.html">Topic 1-2</a></li>
-        </ul>
-      </li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="leadership_board.html">Leaderboard</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
-      <a href="account_page.html"></a>
-  </ul>
-  </div>
-</nav>
-<div class="ctn">
-  <img src="images/indexpage.jpg" class="img-fluid" alt="Responsive image" style="width: 100%;">
-  <a class="btn btn-danger" href="signup.html" role="button">Get Started now</a>
-  <div class="search-container">
-</div>
-<div class="container-fluid text-center bg-grey">
-  <div class="inner-ctn">
-  <h2 class="text-left"><strong><em>Sci</em>statics anywhere,<br> <em>Sci</em>statics everywhere.</strong></h2>
-  <h4 class="text-left">Any device, secured. 100% free.</h4>
-  <div class="row text-center">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/classdojo-accesible.jpg" style="height: 100px; width: 100px;">
-        <p>Works on iOS, Android, Kindle Fire, and on any computer</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/classdojo-privacy.jpg" style="height: 100px; width: 100px;">
-        <p>Built with privacy by design.</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="images/classdojo-free.jpg" style="height: 100px; width: 100px;">
-        <p>Scistatic is free for anyone, everyone.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="container-fluid text-center ">
-  <h2 style="font-family: 'Oswald';font-size: 40px">Creative, Innovative Learning in Scistatic</h2>
-  <h4>SCISTASTIC aims to offer a platform for students to be able to explore the world of science.</h4>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-user logo-small"></span>
-      <h4 style ="font-family: 'Oswald';font-size: 30px">INTERACTIVE</h4>
-      <p>Our games are explicitly designed with educational purposes, which aims to help our users learn science topics is a more fun way.  </p>
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html"><em>Sci</em>statics</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="discover_page1.html">Discover<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="discover_page1.html">Topic 1-1</a></li>
+              <li><a href="discover_page2.html">Topic 1-2</a></li>
+            </ul>
+          </li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="leader_board.html">Leaderboard</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-user" id="account_pic"></span></a>
+          <li><a href="account.html"><span id="navbar-username"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Get started button-->
+    <div class="ctn">
+      <img src="images/indexpage.jpg" class="img-fluid" alt="Responsive image" style="width: 100%;">
+      <a class="btn btn-danger" href="signup.html" role="button">Get Started now</a>
+        
+        <!--Headings-->
+        <div class="search-container">
+          <div class="container-fluid text-center bg-grey">
+            <div class="inner-ctn">
+            <h2 class="text-left"><strong><em>Sci</em>statics anywhere,<br> <em>Sci</em>statics everywhere.</strong></h2>
+            <h4 class="text-left">Any device, secured. 100% free.</h4>
+          </div>
+        </div>
+
+        <!--Content (1st strip)-->
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/classdojo-accesible.jpg" style="height: 100px; width: 100px;">
+              <p>Works on iOS, Android, Kindle Fire, and on any computer</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/classdojo-privacy.jpg" style="height: 100px; width: 100px;">
+              <p>Built with privacy by design.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="images/classdojo-free.jpg" style="height: 100px; width: 100px;">
+              <p>Scistatic is free for anyone, everyone.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!--Content (2nd strip)-->
+        <div class="container-fluid text-center ">
+          <h2 style="font-family: 'Oswald';font-size: 40px">Creative, Innovative Learning in Scistatic</h2>
+          <h4>SCISTASTIC aims to offer a platform for students to be able to explore the world of science.</h4>
+          <br>
+          <div class="row">
+
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <h4 style ="font-family: 'Oswald';font-size: 30px">INTERACTIVE</h4>
+              <p>Our games are explicitly designed with educational purposes, which aims to help our users learn science topics is a more fun way.  </p>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-lock logo-small"></span>
+              <h4 style="font-family: 'Oswald';font-size: 30px">SIMPLE</h4>
+              <p>The features in our website is made easy for young learners to log in easily by using a combination of pictures. </p>
+            </div>
+
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-heart-empty logo-small"></span>
+              <h4 style="font-family: 'Oswald';;font-size: 30px">PASSION</h4>
+              <p>As the creators of SCISTASTIC, our main goal is to help our users learn and do better in Science. We will continue to improvise and do better for the learning of our users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4 style="font-family: 'Oswald';font-size: 30px">SIMPLE</h4>
-      <p>The features in our website is made easy for young learners to log in easily by using a combination of pictures. </p>
+
+    <!--Content(3rd Strip)-->
+    <div class = "footer-ctn">
+      <br>
+      <h3 class="text-center"><strong>Join us and explore more about the world of science!</strong></h3>
+      <img src="images/index-footer.jpg" class="img-fluid" alt="Responsive image" style="width: 100%;">
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart-empty logo-small"></span>
-      <h4 style="font-family: 'Oswald';;font-size: 30px">PASSION</h4>
-      <p>As the creators of SCISTASTIC, our main goal is to help our users learn and do better in Science. We will continue to improvise and do better for the learning of our users.</p>
-    </div>
-  </div>
-</div>
-</div>
-<div class = "footer-ctn">
-  <br>
-  <h3 class="text-center"><strong>Join us and explore more about the world of science!</strong></h3>
-  <img src="images/index-footer.jpg" class="img-fluid" alt="Responsive image" style="width: 100%;">
-</div>
-<div class ="footer container-fluid">
-  <p>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini - All Rights Reserved.</p>
-</div>
-    <script src="script.js"></script>
+
+    <!--Footer-->
+    <div class ="footer">
+      <br>Copyright © 2022 Lee Jia Ying Jess & Elluru Sree Harshini
+      <br>- All Rights Reserved.
+    </div> 
+
+    <!--JavaScripts-->
+    <script src="js/account.js"></script>
+    <script src="js/script.js"></script>
+
   </body>
 </html>
